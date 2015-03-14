@@ -10,10 +10,11 @@
 		CE0557A81AB3DB9000FFDCE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557A71AB3DB9000FFDCE7 /* AppDelegate.swift */; };
 		CE0557AC1AB3DB9000FFDCE7 /* QVEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */; };
 		CE0557AF1AB3DB9000FFDCE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0557AD1AB3DB9000FFDCE7 /* Main.storyboard */; };
-		CE0557B41AB3DB9000FFDCE7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0557B21AB3DB9000FFDCE7 /* LaunchScreen.xib */; };
 		CE0557C01AB3DB9000FFDCE7 /* QuickViteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557BF1AB3DB9000FFDCE7 /* QuickViteTests.swift */; };
 		CE4A6E0D1AB4B9C400344B6E /* QVInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A6E0B1AB4B9C400344B6E /* QVInvitation.swift */; };
 		CE4A6E0E1AB4B9C400344B6E /* QVInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A6E0C1AB4B9C400344B6E /* QVInvitationViewController.swift */; };
+		CE4A6E101AB4BC0C00344B6E /* QVTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A6E0F1AB4BC0C00344B6E /* QVTabBarViewController.swift */; };
+		CE4A6E121AB4BE7F00344B6E /* QVSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A6E111AB4BE7F00344B6E /* QVSettingsViewController.swift */; };
 		CE5D87531AB47C75009D690B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5D87521AB47C75009D690B /* FacebookSDK.framework */; };
 		CE5D87541AB47C79009D690B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5D87521AB47C75009D690B /* FacebookSDK.framework */; };
 		CE5D87561AB47CA6009D690B /* QVFacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5D87551AB47CA6009D690B /* QVFacebookViewController.swift */; };
@@ -23,7 +24,7 @@
 		CED5C5921AB498E000B95FF6 /* QVAddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5C5911AB498E000B95FF6 /* QVAddEventViewController.swift */; };
 		CED5C5941AB498F300B95FF6 /* QVAddEventFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5C5931AB498F300B95FF6 /* QVAddEventFriendsViewController.swift */; };
 		CEDC83D51AB3FE3E007D5A5D /* QVEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */; };
-		CEDCC6841AB4430C00C8FA87 /* QVGeneralListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCC6831AB4430C00C8FA87 /* QVGeneralListViewController.swift */; };
+		CEDCC6841AB4430C00C8FA87 /* QVGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCC6831AB4430C00C8FA87 /* QVGeneralViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,12 +43,13 @@
 		CE0557A71AB3DB9000FFDCE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QVEventViewController.swift; sourceTree = "<group>"; };
 		CE0557AE1AB3DB9000FFDCE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE0557B31AB3DB9000FFDCE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CE0557B91AB3DB9000FFDCE7 /* QuickViteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickViteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0557BE1AB3DB9000FFDCE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0557BF1AB3DB9000FFDCE7 /* QuickViteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickViteTests.swift; sourceTree = "<group>"; };
 		CE4A6E0B1AB4B9C400344B6E /* QVInvitation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVInvitation.swift; sourceTree = "<group>"; };
 		CE4A6E0C1AB4B9C400344B6E /* QVInvitationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVInvitationViewController.swift; sourceTree = "<group>"; };
+		CE4A6E0F1AB4BC0C00344B6E /* QVTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVTabBarViewController.swift; sourceTree = "<group>"; };
+		CE4A6E111AB4BE7F00344B6E /* QVSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVSettingsViewController.swift; sourceTree = "<group>"; };
 		CE5D87521AB47C75009D690B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		CE5D87551AB47CA6009D690B /* QVFacebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVFacebookViewController.swift; sourceTree = "<group>"; };
 		CE5D87571AB47D51009D690B /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 		CED5C5911AB498E000B95FF6 /* QVAddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVAddEventViewController.swift; sourceTree = "<group>"; };
 		CED5C5931AB498F300B95FF6 /* QVAddEventFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVAddEventFriendsViewController.swift; sourceTree = "<group>"; };
 		CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVEvent.swift; sourceTree = "<group>"; };
-		CEDCC6831AB4430C00C8FA87 /* QVGeneralListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVGeneralListViewController.swift; sourceTree = "<group>"; };
+		CEDCC6831AB4430C00C8FA87 /* QVGeneralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVGeneralViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,10 +156,12 @@
 				CED5C5931AB498F300B95FF6 /* QVAddEventFriendsViewController.swift */,
 				CED5C5911AB498E000B95FF6 /* QVAddEventViewController.swift */,
 				CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */,
-				CEDCC6831AB4430C00C8FA87 /* QVGeneralListViewController.swift */,
+				CEDCC6831AB4430C00C8FA87 /* QVGeneralViewController.swift */,
+				CE4A6E111AB4BE7F00344B6E /* QVSettingsViewController.swift */,
 				CE5D87551AB47CA6009D690B /* QVFacebookViewController.swift */,
 				CE4A6E0B1AB4B9C400344B6E /* QVInvitation.swift */,
 				CE4A6E0C1AB4B9C400344B6E /* QVInvitationViewController.swift */,
+				CE4A6E0F1AB4BC0C00344B6E /* QVTabBarViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -166,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				CE0557AD1AB3DB9000FFDCE7 /* Main.storyboard */,
-				CE0557B21AB3DB9000FFDCE7 /* LaunchScreen.xib */,
 			);
 			name = NIBs;
 			sourceTree = "<group>";
@@ -254,7 +257,6 @@
 			files = (
 				CE8A63C41AB42C8400AE3BEC /* Images.xcassets in Resources */,
 				CE0557AF1AB3DB9000FFDCE7 /* Main.storyboard in Resources */,
-				CE0557B41AB3DB9000FFDCE7 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,15 +274,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDCC6841AB4430C00C8FA87 /* QVGeneralListViewController.swift in Sources */,
+				CEDCC6841AB4430C00C8FA87 /* QVGeneralViewController.swift in Sources */,
 				CE4A6E0D1AB4B9C400344B6E /* QVInvitation.swift in Sources */,
 				CE5D87561AB47CA6009D690B /* QVFacebookViewController.swift in Sources */,
 				CED5C5921AB498E000B95FF6 /* QVAddEventViewController.swift in Sources */,
 				CE0557AC1AB3DB9000FFDCE7 /* QVEventViewController.swift in Sources */,
 				CED5C5941AB498F300B95FF6 /* QVAddEventFriendsViewController.swift in Sources */,
+				CE4A6E121AB4BE7F00344B6E /* QVSettingsViewController.swift in Sources */,
 				CE8A63C71AB42E5C00AE3BEC /* QVCarpool.swift in Sources */,
 				CEDC83D51AB3FE3E007D5A5D /* QVEvent.swift in Sources */,
 				CE0557A81AB3DB9000FFDCE7 /* AppDelegate.swift in Sources */,
+				CE4A6E101AB4BC0C00344B6E /* QVTabBarViewController.swift in Sources */,
 				CE8A63C81AB42E5C00AE3BEC /* QVPerson.swift in Sources */,
 				CE4A6E0E1AB4B9C400344B6E /* QVInvitationViewController.swift in Sources */,
 			);
@@ -311,14 +315,6 @@
 				CE0557AE1AB3DB9000FFDCE7 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CE0557B21AB3DB9000FFDCE7 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE0557B31AB3DB9000FFDCE7 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -411,6 +407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -428,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
