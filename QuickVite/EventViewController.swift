@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  EventViewController.swift
 //  QuickVite
 //
 //  Created by Elliot Barer on 2015-03-13.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class EventViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,8 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func test() -> Bool {
-        return true
+    @IBAction func cancel(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
-
 }
 
