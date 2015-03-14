@@ -8,11 +8,11 @@
 
 import UIKit
 
-class QVGeneralListViewController: UINavigationController {
+class QVSettingsViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.navigationBar.barTintColor = UIColor(red: 63.0/255, green: 195.0/255, blue: 128.0/255, alpha: 1.0)
         self.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]

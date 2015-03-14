@@ -6,35 +6,16 @@
 //  Copyright (c) 2015 Elliot Barer. All rights reserved.
 //
 
-struct VQ {
-    static let url = "http://206.12.55.70:5000"
-}
-
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, FBLoginViewDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		window?.tintColor = UIColor(red: 63.0/255, green: 195.0/255, blue: 128.0/255, alpha: 1.0)
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
-        
-        var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var initialViewController = storyboard.instantiateViewControllerWithIdentifier("QVTabBarController") as UITabBarController
-        var loginViewController = storyboard.instantiateViewControllerWithIdentifier("QVLoginViewController") as UIViewController
-        
-        if (FBSession.activeSession().accessTokenData != nil) {
-            println("Facebook Session Active")
-            self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
-        } else {
-            println("Facebook Session Inactive")
-            self.window?.rootViewController = loginViewController
-            self.window?.makeKeyAndVisible()
-        }
-        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)        
         return true
     }
 

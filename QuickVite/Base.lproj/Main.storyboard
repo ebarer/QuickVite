@@ -224,7 +224,7 @@
         <!--Friends-->
         <scene sceneID="YIC-mF-NIL">
             <objects>
-                <navigationController id="3c3-Hv-ahT" customClass="QVGeneralListViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="3c3-Hv-ahT" customClass="QVGeneralViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Friends" image="Friends Icon" id="6Mc-U6-vyd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YWz-se-Zfj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -271,7 +271,7 @@
         <!--Invitations-->
         <scene sceneID="Ot3-09-6GN">
             <objects>
-                <navigationController id="mI2-aT-lCh" customClass="QVGeneralListViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="mI2-aT-lCh" customClass="QVGeneralViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Invitations" image="Invitations Icon" id="RpQ-DZ-UXd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6xg-nx-Dlm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -284,23 +284,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhS-v3-Zkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="188" y="1359"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="kW0-1l-BK2">
-            <objects>
-                <navigationController id="Yo3-sG-21m" customClass="QVGeneralListViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="Settings Icon" id="wdw-Se-aKk"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ih3-Kt-Dcu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="jdn-y3-4az" kind="relationship" relationship="rootViewController" id="zgz-pG-Gz4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="56Q-e8-9Ri" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="188" y="2108"/>
         </scene>
         <!--Events-->
         <scene sceneID="kFb-lM-bhv">
@@ -355,10 +338,10 @@
             </objects>
             <point key="canvasLocation" x="1000" y="606"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="UOT-31-wg9">
             <objects>
-                <tabBarController storyboardIdentifier="QVTabBarController" id="ZEU-Hx-fxn" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="QVTabBarController" id="ZEU-Hx-fxn" customClass="QVTabBarViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="eV7-Xz-RPB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -369,17 +352,34 @@
                         <segue destination="MX8-Bz-Agm" kind="relationship" relationship="viewControllers" id="uu9-Kk-Jq5"/>
                         <segue destination="3c3-Hv-ahT" kind="relationship" relationship="viewControllers" id="rZo-Dw-dDc"/>
                         <segue destination="mI2-aT-lCh" kind="relationship" relationship="viewControllers" id="7G5-9F-GpF"/>
-                        <segue destination="Yo3-sG-21m" kind="relationship" relationship="viewControllers" id="OBR-xq-VQg"/>
+                        <segue destination="uZH-rW-Mp2" kind="relationship" relationship="viewControllers" id="sEl-qj-Iyx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Mk-ff-Dmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-974" y="1562"/>
+            <point key="canvasLocation" x="-974" y="1554"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="juX-jC-WUI">
+            <objects>
+                <navigationController storyboardIdentifier="loginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uZH-rW-Mp2" customClass="QVSettingsViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings Icon" id="4Nt-a6-gbb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dhX-jY-PwE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jdn-y3-4az" kind="relationship" relationship="rootViewController" id="YGC-5c-Lck"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cEh-kC-eLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="2099"/>
         </scene>
         <!--Login-->
         <scene sceneID="Iei-jQ-Njp">
             <objects>
-                <viewController storyboardIdentifier="QVLoginViewController" title="Login" id="jdn-y3-4az" customClass="QVFacebookViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="jdn-y3-4az" customClass="QVFacebookViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K0e-bw-eCa"/>
                         <viewControllerLayoutGuide type="bottom" id="Qzd-gy-Hqw"/>
@@ -393,20 +393,31 @@
                                 <rect key="frame" x="90" y="173" width="420" height="254"/>
 =======
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMY-dG-Rd7" customClass="FBLoginView">
->>>>>>> gurinderhans
+                                <rect key="frame" x="127" y="407" width="346" height="104"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="IMY-dG-Rd7" secondAttribute="centerX" id="29N-lu-k9W"/>
+                            <constraint firstItem="Qzd-gy-Hqw" firstAttribute="top" secondItem="IMY-dG-Rd7" secondAttribute="bottom" constant="50" id="cFQ-tY-Mwx"/>
+                            <constraint firstItem="Qzd-gy-Hqw" firstAttribute="top" secondItem="IMY-dG-Rd7" secondAttribute="bottom" constant="50" id="ziR-LY-opA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cFQ-tY-Mwx"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="LD5-EM-efn"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings Icon" id="1R8-Wc-JYD"/>
+                    <navigationItem key="navigationItem" title="Settings" id="KLv-gD-OiX"/>
                     <connections>
                         <outlet property="fbLoginView" destination="IMY-dG-Rd7" id="Uzu-1o-5jM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vr-9n-rvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018" y="2108"/>
+            <point key="canvasLocation" x="1008" y="2099"/>
         </scene>
         <!--General List View Controller-->
         <scene sceneID="CYn-Jo-sIO">
@@ -429,7 +440,7 @@
         <!--Events-->
         <scene sceneID="V8J-S9-Ebx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MX8-Bz-Agm" customClass="QVGeneralListViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MX8-Bz-Agm" customClass="QVGeneralViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Events" image="Events Icon" id="u1P-Bp-pOu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a4b-4a-LPa">
