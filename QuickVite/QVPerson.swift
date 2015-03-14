@@ -26,17 +26,22 @@ class QVPerson: NSObject {
     }
     
     func getPerson() {
-        let urlAsString = "www.inserturlhere.com"
+        let urlAsString = "http://206.12.55.70:5000/persons"
         let url = NSURL(string: urlAsString)!
         let request = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), { (response, data, error) -> Void in
+            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error: nil) as NSDictionary
+            var persons = jsonResult["persons"]! as [[String : AnyObject]]
             
+            self.firstName = persons[0]["name"]! as String
+            self.lastName = persons[0]["name"]! as String
+
         })
         
     }
     
-    func postPerson(data: NSData) {
-        let urlAsString = "www.inserturlhere.com"
+    func postPerson(data: AnyObject) {
+        let urlAsString = "http://206.12.55.70:5000/getNames"
         let url = NSURL(string: urlAsString)!
         
         let request = NSMutableURLRequest(URL: url)
@@ -45,7 +50,7 @@ class QVPerson: NSObject {
         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(data, options: nil, error: nil)
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), { (response, data, error) -> Void in
-            
+            println("hello");
         })
         
     }
