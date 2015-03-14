@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  QVEventViewController.swift
 //  QuickVite
 //
 //  Created by Elliot Barer on 2015-03-13.

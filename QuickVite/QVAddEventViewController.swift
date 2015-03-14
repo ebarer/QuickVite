@@ -1,5 +1,5 @@
 //
-//  EventViewController.swift
+//  QVAddEventViewController.swift
 //  QuickVite
 //
 //  Created by Elliot Barer on 2015-03-13.
@@ -8,52 +8,53 @@
 
 import UIKit
 
-class QVAddEventViewController: UIViewController {
+class QVAddEventViewController: UITableViewController {
     
-    // New Event object
     var newEvent: QVEvent?
     
-    // UI Elements
     @IBOutlet weak var nextFriends: UIBarButtonItem!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    //
-    // Navigation Bar Functions
-    //
-    
     @IBAction func cancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DoneItem"{
-//            if let name = textField.text {
-//                if !name.isEmpty{
-//                    newItem = ScavengerHuntItem(name: name)
-//                }
-//            }
+
         }
     }
-
-    //
-    // UIView Elements
-    //
     
-//    @IBAction func datePicker(sender: UITextField) {
-//        var datePickerView  : UIDatePicker = UIDatePicker()
-//        datePickerView.datePickerMode = UIDatePickerMode.Date
-//        sender.inputView = datePickerView
-//        datePickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
-//    }
+    
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        tableView.rowHeight = 43
+        switch indexPath.row {
+            case 0:
+                let cell = tableView.dequeueReusableCellWithIdentifier("addEventType", forIndexPath: indexPath) as! UITableViewCell
+                return cell
+            case 1:
+                tableView.rowHeight = 178
+                let cell = tableView.dequeueReusableCellWithIdentifier("addEventTypePicker", forIndexPath: indexPath) as! UITableViewCell
+                return cell
+            case 2:
+                let cell = tableView.dequeueReusableCellWithIdentifier("addEventDate", forIndexPath: indexPath) as! UITableViewCell
+                return cell
+            case 3:
+                tableView.rowHeight = 178
+                let cell = tableView.dequeueReusableCellWithIdentifier("addEventDatePicker", forIndexPath: indexPath) as! UITableViewCell
+                return cell
+            case 4:
+                let cell = tableView.dequeueReusableCellWithIdentifier("addEventLocation", forIndexPath: indexPath) as! UITableViewCell
+                return cell
+            default:
+                let cell = tableView.dequeueReusableCellWithIdentifier("addEventType", forIndexPath: indexPath) as! UITableViewCell
+                return cell
+        }
+    }
     
 }
 
