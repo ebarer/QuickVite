@@ -11,7 +11,6 @@ import UIKit
 class QVAddEventViewController: UITableViewController, UITextFieldDelegate {
     
     var newEvent: QVEvent?
-
     
     @IBOutlet weak var eventType: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -26,12 +25,10 @@ class QVAddEventViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "DoneItem"{
-            newEvent?.type = eventType.text
-            newEvent?.date = datePicker.date
-            newEvent?.location = eventLocation.text
-            
-            
+        if (segue.identifier == "addEventNext") {
+            newEvent = QVEvent(type: eventType.text, date: datePicker.date, location: eventLocation.text)
+            let VC:QVAddEventFriendsViewController = segue.destinationViewController as QVAddEventFriendsViewController
+            VC.newEvent = newEvent
         }
     }
     

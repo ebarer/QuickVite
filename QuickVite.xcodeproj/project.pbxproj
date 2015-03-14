@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CE0557A81AB3DB9000FFDCE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557A71AB3DB9000FFDCE7 /* AppDelegate.swift */; };
-		CE0557AA1AB3DB9000FFDCE7 /* QVAddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557A91AB3DB9000FFDCE7 /* QVAddEventViewController.swift */; };
 		CE0557AC1AB3DB9000FFDCE7 /* QVEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */; };
 		CE0557AF1AB3DB9000FFDCE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0557AD1AB3DB9000FFDCE7 /* Main.storyboard */; };
 		CE0557B41AB3DB9000FFDCE7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0557B21AB3DB9000FFDCE7 /* LaunchScreen.xib */; };
@@ -19,6 +18,8 @@
 		CE8A63C41AB42C8400AE3BEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8A63C31AB42C8400AE3BEC /* Images.xcassets */; };
 		CE8A63C71AB42E5C00AE3BEC /* QVCarpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A63C51AB42E5C00AE3BEC /* QVCarpool.swift */; };
 		CE8A63C81AB42E5C00AE3BEC /* QVPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A63C61AB42E5C00AE3BEC /* QVPerson.swift */; };
+		CED5C5921AB498E000B95FF6 /* QVAddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5C5911AB498E000B95FF6 /* QVAddEventViewController.swift */; };
+		CED5C5941AB498F300B95FF6 /* QVAddEventFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5C5931AB498F300B95FF6 /* QVAddEventFriendsViewController.swift */; };
 		CEDC83D51AB3FE3E007D5A5D /* QVEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */; };
 		CEDCC6841AB4430C00C8FA87 /* QVGeneralListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCC6831AB4430C00C8FA87 /* QVGeneralListViewController.swift */; };
 /* End PBXBuildFile section */
@@ -37,7 +38,6 @@
 		CE0557A21AB3DB9000FFDCE7 /* QuickVite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickVite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0557A61AB3DB9000FFDCE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0557A71AB3DB9000FFDCE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE0557A91AB3DB9000FFDCE7 /* QVAddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QVAddEventViewController.swift; sourceTree = "<group>"; };
 		CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QVEventViewController.swift; sourceTree = "<group>"; };
 		CE0557AE1AB3DB9000FFDCE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE0557B31AB3DB9000FFDCE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -50,6 +50,8 @@
 		CE8A63C31AB42C8400AE3BEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		CE8A63C51AB42E5C00AE3BEC /* QVCarpool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVCarpool.swift; sourceTree = "<group>"; };
 		CE8A63C61AB42E5C00AE3BEC /* QVPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVPerson.swift; sourceTree = "<group>"; };
+		CED5C5911AB498E000B95FF6 /* QVAddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVAddEventViewController.swift; sourceTree = "<group>"; };
+		CED5C5931AB498F300B95FF6 /* QVAddEventFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVAddEventFriendsViewController.swift; sourceTree = "<group>"; };
 		CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVEvent.swift; sourceTree = "<group>"; };
 		CEDCC6831AB4430C00C8FA87 /* QVGeneralListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVGeneralListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,7 +147,8 @@
 		CE8A63CA1AB42E7500AE3BEC /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE0557A91AB3DB9000FFDCE7 /* QVAddEventViewController.swift */,
+				CED5C5931AB498F300B95FF6 /* QVAddEventFriendsViewController.swift */,
+				CED5C5911AB498E000B95FF6 /* QVAddEventViewController.swift */,
 				CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */,
 				CEDCC6831AB4430C00C8FA87 /* QVGeneralListViewController.swift */,
 				CE5D87551AB47CA6009D690B /* QVFacebookViewController.swift */,
@@ -265,11 +268,12 @@
 			files = (
 				CEDCC6841AB4430C00C8FA87 /* QVGeneralListViewController.swift in Sources */,
 				CE5D87561AB47CA6009D690B /* QVFacebookViewController.swift in Sources */,
+				CED5C5921AB498E000B95FF6 /* QVAddEventViewController.swift in Sources */,
 				CE0557AC1AB3DB9000FFDCE7 /* QVEventViewController.swift in Sources */,
+				CED5C5941AB498F300B95FF6 /* QVAddEventFriendsViewController.swift in Sources */,
 				CE8A63C71AB42E5C00AE3BEC /* QVCarpool.swift in Sources */,
 				CEDC83D51AB3FE3E007D5A5D /* QVEvent.swift in Sources */,
 				CE0557A81AB3DB9000FFDCE7 /* AppDelegate.swift in Sources */,
-				CE0557AA1AB3DB9000FFDCE7 /* QVAddEventViewController.swift in Sources */,
 				CE8A63C81AB42E5C00AE3BEC /* QVPerson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
