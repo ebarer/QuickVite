@@ -1,28 +1,31 @@
 //
-//  QVEvent.swift
+//  QVPerson.swift
 //  QuickVite
 //
-//  Created by Farzin Faghihi on 2015-03-13.
+//  Created by Farzin Faghihi on 2015-03-14.
 //  Copyright (c) 2015 Elliot Barer. All rights reserved.
 //
 
 import Foundation
 
-class QVEvent: NSObject {
+class QVPerson: NSObject {
     
-    var type: String
-    var date: NSDate?
-    var location: String?
-    
-    init(type: String, date dateParam: NSDate?, location locationParam: String) {
-        self.type = type
-        
-        if let newDate = dateParam {
-            self.date = newDate
+    var firstName: String
+    var lastName: String
+    var car: QVCarpool?
+    var hasCar: Bool {
+        get {
+            return car != nil
         }
+        
     }
     
-    func getEvent() {
+    init(firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+    }
+    
+    func getPerson() {
         let urlAsString = "www.inserturlhere.com"
         let url = NSURL(string: urlAsString)!
         let request = NSURLRequest(URL: url)
@@ -32,7 +35,7 @@ class QVEvent: NSObject {
         
     }
     
-    func postEvent(data: NSData) {
+    func postPerson(data: NSData) {
         let urlAsString = "www.inserturlhere.com"
         let url = NSURL(string: urlAsString)!
         
