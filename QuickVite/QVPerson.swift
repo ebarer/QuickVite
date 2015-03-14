@@ -48,7 +48,7 @@ class QVPerson: NSObject {
         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(data, options: nil, error: nil)
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
-            println("hello");
+
         })
     }
     
