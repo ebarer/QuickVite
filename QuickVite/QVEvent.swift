@@ -46,14 +46,17 @@ class QVEvent: NSObject {
         dateFormatter.dateFormat = "YYYY-MM-DD hh:mm" //format style. Browse online to get a format that fits your needs.
         var dateString = dateFormatter.stringFromDate(self.date!)
         
-        var nsArrayFoo = NSDictionary()
-        nsArrayFoo.setValue(dateString, forKey: "date")
-        nsArrayFoo.setValue(self.type, forKey: "type")
-        nsArrayFoo.setValue(self.location, forKey: "location")
+        var dict = ["type": self.type, "date": dateString]
+        
+        //checking if we have a location to had, if not it will crash passing in nil to dictionary
+        if let loc = self.location {
+            dict["location"] = loc
+        }
+
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.HTTPMethod = "POST"
-        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(nsArrayFoo, options: nil, error: nil)
+        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(dict, options: nil, error: nil)
         
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
