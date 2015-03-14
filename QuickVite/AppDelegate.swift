@@ -6,6 +6,10 @@
 //  Copyright (c) 2015 Elliot Barer. All rights reserved.
 //
 
+struct VQ {
+    static let url = "http://206.12.55.70:5000"
+}
+
 import UIKit
 
 @UIApplicationMain

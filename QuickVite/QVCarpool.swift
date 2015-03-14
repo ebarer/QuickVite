@@ -21,7 +21,7 @@ class QVCarpool: NSObject {
     }
     
     func getCar() {
-        let urlAsString = "http://206.12.55.70:5000/persons"
+        let urlAsString = VQ.url + "/persons"
         let url = NSURL(string: urlAsString)!
         let request = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
@@ -32,7 +32,7 @@ class QVCarpool: NSObject {
     }
 
     func postCar(data: NSData) {
-        let urlAsString = "www.inserturlhere.com"
+        let urlAsString = VQ.url + "/persons"
         let url = NSURL(string: urlAsString)!
         
         let request = NSMutableURLRequest(URL: url)
