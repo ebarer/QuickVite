@@ -14,6 +14,13 @@ class QVEvent: NSObject {
     var date: NSDate
     var location: String
     
+    init(name: String, date dateParam: NSDate?) {
+        self.name = name
+        
+        if let newDate = dateParam {
+            self.date = newDate
+        }
+    }
     
     func getEvent() {
         let urlAsString = "www.inserturlhere.com"
