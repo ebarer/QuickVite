@@ -12,6 +12,7 @@ class QVAddEventViewController: UITableViewController, UITextFieldDelegate {
     
     var newEvent: QVEvent?
     
+    @IBOutlet var fbLoginView: FBLoginView!
     @IBOutlet weak var eventType: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var dateValue: UILabel!

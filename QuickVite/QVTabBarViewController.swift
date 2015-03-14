@@ -14,8 +14,8 @@ struct VQ {
 
 var fbkLoggedIn: Bool = false
 
-class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
-
+class QVTabBarViewController: UITabBarController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
