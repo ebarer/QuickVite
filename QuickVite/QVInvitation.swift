@@ -10,13 +10,9 @@ import Foundation
 
 class QVInvitation {
     
-    var invName: String
-    var invTime: String
+    var invName: String?
+    var invTime: String?
     
     var people = [String]()
-    
-    
-    init(){
-        //
-    }
+
 }
