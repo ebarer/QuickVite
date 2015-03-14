@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41D815A51AB49078003DDEC3 /* QVInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D815A41AB49078003DDEC3 /* QVInvitationViewController.swift */; };
-		41D815A71AB49664003DDEC3 /* QVInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D815A61AB49664003DDEC3 /* QVInvitation.swift */; };
 		CE0557A81AB3DB9000FFDCE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557A71AB3DB9000FFDCE7 /* AppDelegate.swift */; };
 		CE0557AC1AB3DB9000FFDCE7 /* QVEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */; };
 		CE0557AF1AB3DB9000FFDCE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0557AD1AB3DB9000FFDCE7 /* Main.storyboard */; };
 		CE0557B41AB3DB9000FFDCE7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0557B21AB3DB9000FFDCE7 /* LaunchScreen.xib */; };
 		CE0557C01AB3DB9000FFDCE7 /* QuickViteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557BF1AB3DB9000FFDCE7 /* QuickViteTests.swift */; };
+		CE4A6E0D1AB4B9C400344B6E /* QVInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A6E0B1AB4B9C400344B6E /* QVInvitation.swift */; };
+		CE4A6E0E1AB4B9C400344B6E /* QVInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A6E0C1AB4B9C400344B6E /* QVInvitationViewController.swift */; };
 		CE5D87531AB47C75009D690B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5D87521AB47C75009D690B /* FacebookSDK.framework */; };
 		CE5D87541AB47C79009D690B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5D87521AB47C75009D690B /* FacebookSDK.framework */; };
 		CE5D87561AB47CA6009D690B /* QVFacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5D87551AB47CA6009D690B /* QVFacebookViewController.swift */; };
@@ -37,8 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		41D815A41AB49078003DDEC3 /* QVInvitationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVInvitationViewController.swift; sourceTree = "<group>"; };
-		41D815A61AB49664003DDEC3 /* QVInvitation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVInvitation.swift; sourceTree = "<group>"; };
 		CE0557A21AB3DB9000FFDCE7 /* QuickVite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickVite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0557A61AB3DB9000FFDCE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0557A71AB3DB9000FFDCE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +46,8 @@
 		CE0557B91AB3DB9000FFDCE7 /* QuickViteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickViteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0557BE1AB3DB9000FFDCE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0557BF1AB3DB9000FFDCE7 /* QuickViteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickViteTests.swift; sourceTree = "<group>"; };
+		CE4A6E0B1AB4B9C400344B6E /* QVInvitation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVInvitation.swift; sourceTree = "<group>"; };
+		CE4A6E0C1AB4B9C400344B6E /* QVInvitationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVInvitationViewController.swift; sourceTree = "<group>"; };
 		CE5D87521AB47C75009D690B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		CE5D87551AB47CA6009D690B /* QVFacebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVFacebookViewController.swift; sourceTree = "<group>"; };
 		CE5D87571AB47D51009D690B /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -144,7 +144,6 @@
 				CE8A63C51AB42E5C00AE3BEC /* QVCarpool.swift */,
 				CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */,
 				CE8A63C61AB42E5C00AE3BEC /* QVPerson.swift */,
-				41D815A61AB49664003DDEC3 /* QVInvitation.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -157,7 +156,8 @@
 				CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */,
 				CEDCC6831AB4430C00C8FA87 /* QVGeneralListViewController.swift */,
 				CE5D87551AB47CA6009D690B /* QVFacebookViewController.swift */,
-				41D815A41AB49078003DDEC3 /* QVInvitationViewController.swift */,
+				CE4A6E0B1AB4B9C400344B6E /* QVInvitation.swift */,
+				CE4A6E0C1AB4B9C400344B6E /* QVInvitationViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDCC6841AB4430C00C8FA87 /* QVGeneralListViewController.swift in Sources */,
-				41D815A71AB49664003DDEC3 /* QVInvitation.swift in Sources */,
+				CE4A6E0D1AB4B9C400344B6E /* QVInvitation.swift in Sources */,
 				CE5D87561AB47CA6009D690B /* QVFacebookViewController.swift in Sources */,
 				CED5C5921AB498E000B95FF6 /* QVAddEventViewController.swift in Sources */,
 				CE0557AC1AB3DB9000FFDCE7 /* QVEventViewController.swift in Sources */,
@@ -282,6 +282,7 @@
 				CEDC83D51AB3FE3E007D5A5D /* QVEvent.swift in Sources */,
 				CE0557A81AB3DB9000FFDCE7 /* AppDelegate.swift in Sources */,
 				CE8A63C81AB42E5C00AE3BEC /* QVPerson.swift in Sources */,
+				CE4A6E0E1AB4B9C400344B6E /* QVInvitationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
