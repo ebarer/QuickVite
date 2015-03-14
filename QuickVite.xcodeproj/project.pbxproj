@@ -11,9 +11,9 @@
 		CE0557AA1AB3DB9000FFDCE7 /* QVAddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557A91AB3DB9000FFDCE7 /* QVAddEventViewController.swift */; };
 		CE0557AC1AB3DB9000FFDCE7 /* QVEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */; };
 		CE0557AF1AB3DB9000FFDCE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0557AD1AB3DB9000FFDCE7 /* Main.storyboard */; };
-		CE0557B11AB3DB9000FFDCE7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0557B01AB3DB9000FFDCE7 /* Images.xcassets */; };
 		CE0557B41AB3DB9000FFDCE7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0557B21AB3DB9000FFDCE7 /* LaunchScreen.xib */; };
 		CE0557C01AB3DB9000FFDCE7 /* QuickViteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557BF1AB3DB9000FFDCE7 /* QuickViteTests.swift */; };
+		CE8A63C41AB42C8400AE3BEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8A63C31AB42C8400AE3BEC /* Images.xcassets */; };
 		CEDC83D51AB3FE3E007D5A5D /* QVEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,11 +34,11 @@
 		CE0557A91AB3DB9000FFDCE7 /* QVAddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QVAddEventViewController.swift; sourceTree = "<group>"; };
 		CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QVEventViewController.swift; sourceTree = "<group>"; };
 		CE0557AE1AB3DB9000FFDCE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE0557B01AB3DB9000FFDCE7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE0557B31AB3DB9000FFDCE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CE0557B91AB3DB9000FFDCE7 /* QuickViteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickViteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0557BE1AB3DB9000FFDCE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0557BF1AB3DB9000FFDCE7 /* QuickViteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickViteTests.swift; sourceTree = "<group>"; };
+		CE8A63C31AB42C8400AE3BEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,7 +85,7 @@
 				CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */,
 				CE0557A91AB3DB9000FFDCE7 /* QVAddEventViewController.swift */,
 				CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */,
-				CE0557B01AB3DB9000FFDCE7 /* Images.xcassets */,
+				CE8A63C31AB42C8400AE3BEC /* Images.xcassets */,
 				CE0557AD1AB3DB9000FFDCE7 /* Main.storyboard */,
 				CE0557B21AB3DB9000FFDCE7 /* LaunchScreen.xib */,
 				CE0557A51AB3DB9000FFDCE7 /* Supporting Files */,
@@ -199,9 +199,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8A63C41AB42C8400AE3BEC /* Images.xcassets in Resources */,
 				CE0557AF1AB3DB9000FFDCE7 /* Main.storyboard in Resources */,
 				CE0557B41AB3DB9000FFDCE7 /* LaunchScreen.xib in Resources */,
-				CE0557B11AB3DB9000FFDCE7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
