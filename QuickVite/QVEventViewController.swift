@@ -13,6 +13,10 @@ class QVEventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        var myArr = ["Farzin Faghihi"]
+        var myQVPerson = QVPerson(firstName: "farzin", lastName: "faghihi")
+        myQVPerson.postPerson(myArr)
     }
 
     override func didReceiveMemoryWarning() {
