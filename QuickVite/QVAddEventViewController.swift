@@ -26,20 +26,34 @@ class QVAddEventViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //
+    // Navigation Bar Functions
+    //
+    
     @IBAction func cancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DoneItem"{
-            if let name = textField.text {
-                if !name.isEmpty{
-                    newItem = ScavengerHuntItem(name: name)
-                }
-            }
+//            if let name = textField.text {
+//                if !name.isEmpty{
+//                    newItem = ScavengerHuntItem(name: name)
+//                }
+//            }
         }
     }
 
+    //
+    // UIView Elements
+    //
+    
+    @IBAction func datePicker(sender: UITextField) {
+        var datePickerView  : UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+    }
     
 }
 
