@@ -183,7 +183,7 @@
         <scene sceneID="YIC-mF-NIL">
             <objects>
                 <navigationController id="3c3-Hv-ahT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nearby" id="6Mc-U6-vyd"/>
+                    <tabBarItem key="tabBarItem" title="Nearby" image="Nearby Icon" id="6Mc-U6-vyd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YWz-se-Zfj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -230,7 +230,7 @@
         <scene sceneID="Ot3-09-6GN">
             <objects>
                 <navigationController id="mI2-aT-lCh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Invitations" id="RpQ-DZ-UXd"/>
+                    <tabBarItem key="tabBarItem" title="Invitations" image="Invitations icon" id="RpQ-DZ-UXd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6xg-nx-Dlm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -274,7 +274,7 @@
         <scene sceneID="kW0-1l-BK2">
             <objects>
                 <navigationController id="Yo3-sG-21m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="wdw-Se-aKk"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Nearby Icon" id="wdw-Se-aKk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ih3-Kt-Dcu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -384,7 +384,7 @@
         <scene sceneID="V8J-S9-Ebx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MX8-Bz-Agm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Events" id="u1P-Bp-pOu"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="Events icon" id="u1P-Bp-pOu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a4b-4a-LPa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -401,6 +401,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Events icon" width="25" height="29"/>
+        <image name="Invitations icon" width="32" height="29"/>
+        <image name="Nearby Icon" width="34" height="29"/>
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
