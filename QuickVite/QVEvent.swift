@@ -10,7 +10,7 @@ import Foundation
 
 class QVEvent: NSObject {
     
-    var name: String
+    var type: String
     var date: NSDate?
     var location: String?
     
