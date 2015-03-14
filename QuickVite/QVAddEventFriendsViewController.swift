@@ -13,6 +13,8 @@ class QVAddEventFriendsViewController: UIViewController {
     var newEvent: QVEvent?
     let friendList:[String]?
     
+    let test:Bool = false
+    
     @IBOutlet weak var testField: UITextField!
 
     override func viewDidLoad() {
