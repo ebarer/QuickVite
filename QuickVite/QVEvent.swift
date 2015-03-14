@@ -38,17 +38,17 @@ class QVEvent: NSObject {
     }
     
     func postEvent(data: AnyObject) {
-        let urlAsString = "http://206.12.55.70:5000/getNames"
-        let url = NSURL(string: urlAsString)!
-        
-        let request = NSMutableURLRequest(URL: url)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.HTTPMethod = "POST"
-        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(data, options: nil, error: nil)
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
-            
-        })
+//        let urlAsString = "http://206.12.55.70:5000/getNames"
+//        let url = NSURL(string: urlAsString)!
+//        
+//        let request = NSMutableURLRequest(URL: url)
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.HTTPMethod = "POST"
+//        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(data, options: nil, error: nil)
+//        
+//        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+//            
+//        })
     }
 
 }

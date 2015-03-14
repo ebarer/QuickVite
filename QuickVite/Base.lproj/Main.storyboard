@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mh3-w1-vJn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZEU-Hx-fxn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -275,33 +275,6 @@
             <point key="canvasLocation" x="188" y="1359"/>
         </scene>
         <!--Settings-->
-        <scene sceneID="pb3-Bi-JNX">
-            <objects>
-                <tableViewController id="JUC-G2-mfg" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="S7L-0K-awK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qrc-tN-iBX">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qrc-tN-iBX" id="Q2f-JB-nSG">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="JUC-G2-mfg" id="2pc-Wk-Hie"/>
-                            <outlet property="delegate" destination="JUC-G2-mfg" id="Gm0-qK-Bno"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="V0b-e5-a60"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Spi-r1-xhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1008" y="2108"/>
-        </scene>
-        <!--Settings-->
         <scene sceneID="kW0-1l-BK2">
             <objects>
                 <navigationController id="Yo3-sG-21m" customClass="QVGeneralListViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
@@ -311,7 +284,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="JUC-G2-mfg" kind="relationship" relationship="rootViewController" id="yDS-5o-Sdf"/>
+                        <segue destination="jdn-y3-4az" kind="relationship" relationship="rootViewController" id="UFM-SK-Zab"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56Q-e8-9Ri" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -374,7 +347,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="UOT-31-wg9">
             <objects>
-                <tabBarController id="ZEU-Hx-fxn" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="QVTabBarController" id="ZEU-Hx-fxn" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="eV7-Xz-RPB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -392,32 +365,33 @@
             </objects>
             <point key="canvasLocation" x="-974" y="1562"/>
         </scene>
-        <!--Login View Controller-->
-        <scene sceneID="b1L-aD-qlR">
+        <!--Facebook-->
+        <scene sceneID="Iei-jQ-Njp">
             <objects>
-                <viewController id="mh3-w1-vJn" customClass="QVLoginViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QVLoginViewController" title="Facebook" id="jdn-y3-4az" customClass="QVFacebookViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="O0x-A5-Ukn"/>
-                        <viewControllerLayoutGuide type="bottom" id="iLO-ar-V1J"/>
+                        <viewControllerLayoutGuide type="top" id="K0e-bw-eCa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qzd-gy-Hqw"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7fJ-gK-hW5">
+                    <view key="view" contentMode="scaleToFill" id="uv1-G8-516">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hkz-Cy-UkV" customClass="FBLoginView">
-                                <rect key="frame" x="34" y="238" width="237" height="124"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMY-dG-Rd7" customClass="FBLoginView">
+                                <rect key="frame" x="90" y="173" width="420" height="254"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LD5-EM-efn"/>
                     <connections>
-                        <outlet property="fbLoginView" destination="Hkz-Cy-UkV" id="g8J-FM-h2r"/>
+                        <outlet property="fbLoginView" destination="IMY-dG-Rd7" id="Uzu-1o-5jM"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kEz-gL-7AG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vr-9n-rvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314" y="2235"/>
+            <point key="canvasLocation" x="1130" y="2346"/>
         </scene>
         <!--General List View Controller-->
         <scene sceneID="CYn-Jo-sIO">
@@ -464,8 +438,8 @@
         <image name="Settings Icon" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oaX-4f-DHy"/>
         <segue reference="3Qf-uH-Fxd"/>
+        <segue reference="qOq-EB-fjT"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.24705882352941178" green="0.76470588235294112" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

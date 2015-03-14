@@ -13,6 +13,9 @@
 		CE0557AF1AB3DB9000FFDCE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0557AD1AB3DB9000FFDCE7 /* Main.storyboard */; };
 		CE0557B41AB3DB9000FFDCE7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0557B21AB3DB9000FFDCE7 /* LaunchScreen.xib */; };
 		CE0557C01AB3DB9000FFDCE7 /* QuickViteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557BF1AB3DB9000FFDCE7 /* QuickViteTests.swift */; };
+		CE5D87531AB47C75009D690B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5D87521AB47C75009D690B /* FacebookSDK.framework */; };
+		CE5D87541AB47C79009D690B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5D87521AB47C75009D690B /* FacebookSDK.framework */; };
+		CE5D87561AB47CA6009D690B /* QVFacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5D87551AB47CA6009D690B /* QVFacebookViewController.swift */; };
 		CE8A63C41AB42C8400AE3BEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8A63C31AB42C8400AE3BEC /* Images.xcassets */; };
 		CE8A63C71AB42E5C00AE3BEC /* QVCarpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A63C51AB42E5C00AE3BEC /* QVCarpool.swift */; };
 		CE8A63C81AB42E5C00AE3BEC /* QVPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A63C61AB42E5C00AE3BEC /* QVPerson.swift */; };
@@ -41,6 +44,9 @@
 		CE0557B91AB3DB9000FFDCE7 /* QuickViteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickViteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0557BE1AB3DB9000FFDCE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0557BF1AB3DB9000FFDCE7 /* QuickViteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickViteTests.swift; sourceTree = "<group>"; };
+		CE5D87521AB47C75009D690B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		CE5D87551AB47CA6009D690B /* QVFacebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVFacebookViewController.swift; sourceTree = "<group>"; };
+		CE5D87571AB47D51009D690B /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		CE8A63C31AB42C8400AE3BEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		CE8A63C51AB42E5C00AE3BEC /* QVCarpool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVCarpool.swift; sourceTree = "<group>"; };
 		CE8A63C61AB42E5C00AE3BEC /* QVPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVPerson.swift; sourceTree = "<group>"; };
@@ -53,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5D87531AB47C75009D690B /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5D87541AB47C79009D690B /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +80,7 @@
 				CE0557A41AB3DB9000FFDCE7 /* QuickVite */,
 				CE0557BC1AB3DB9000FFDCE7 /* QuickViteTests */,
 				CE0557A31AB3DB9000FFDCE7 /* Products */,
+				CE5D87521AB47C75009D690B /* FacebookSDK.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +108,7 @@
 		CE0557A51AB3DB9000FFDCE7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE5D87571AB47D51009D690B /* Bridging-Header.h */,
 				CE8A63C31AB42C8400AE3BEC /* Images.xcassets */,
 				CE0557A61AB3DB9000FFDCE7 /* Info.plist */,
 			);
@@ -135,9 +145,10 @@
 		CE8A63CA1AB42E7500AE3BEC /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CEDCC6831AB4430C00C8FA87 /* QVGeneralListViewController.swift */,
-				CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */,
 				CE0557A91AB3DB9000FFDCE7 /* QVAddEventViewController.swift */,
+				CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */,
+				CEDCC6831AB4430C00C8FA87 /* QVGeneralListViewController.swift */,
+				CE5D87551AB47CA6009D690B /* QVFacebookViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -253,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDCC6841AB4430C00C8FA87 /* QVGeneralListViewController.swift in Sources */,
+				CE5D87561AB47CA6009D690B /* QVFacebookViewController.swift in Sources */,
 				CE0557AC1AB3DB9000FFDCE7 /* QVEventViewController.swift in Sources */,
 				CE8A63C71AB42E5C00AE3BEC /* QVCarpool.swift in Sources */,
 				CEDC83D51AB3FE3E007D5A5D /* QVEvent.swift in Sources */,
@@ -336,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -375,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -388,10 +400,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = QuickVite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QuickVite/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -400,10 +417,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = QuickVite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QuickVite/Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -414,6 +436,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -423,6 +446,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QuickVite/Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickVite.app/QuickVite";
 			};
 			name = Debug;
@@ -434,11 +458,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = QuickViteTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QuickVite/Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickVite.app/QuickVite";
 			};
 			name = Release;
