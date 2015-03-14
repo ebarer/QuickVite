@@ -119,12 +119,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Event" id="teP-Wn-INl">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SXt-hM-c0G">
+                            <connections>
+                                <action selector="cancel:" destination="SwA-8Z-Ic2" id="WVC-7F-Ixy"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="TtV-wY-aXe">
                             <connections>
                                 <segue destination="Mlk-zc-Xf8" kind="show" id="iUW-3O-E3j"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nextFriends" destination="TtV-wY-aXe" id="RzA-H6-zGb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRc-bI-Opd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,7 +215,7 @@
         <!--Friends-->
         <scene sceneID="YIC-mF-NIL">
             <objects>
-                <navigationController id="3c3-Hv-ahT" sceneMemberID="viewController">
+                <navigationController id="3c3-Hv-ahT" customClass="QVGeneralListViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Friends" image="Friends Icon" id="6Mc-U6-vyd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YWz-se-Zfj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -254,7 +262,7 @@
         <!--Invitations-->
         <scene sceneID="Ot3-09-6GN">
             <objects>
-                <navigationController id="mI2-aT-lCh" sceneMemberID="viewController">
+                <navigationController id="mI2-aT-lCh" customClass="QVGeneralListViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Invitations" image="Invitations Icon" id="RpQ-DZ-UXd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6xg-nx-Dlm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -298,7 +306,7 @@
         <!--Settings-->
         <scene sceneID="kW0-1l-BK2">
             <objects>
-                <navigationController id="Yo3-sG-21m" sceneMemberID="viewController">
+                <navigationController id="Yo3-sG-21m" customClass="QVGeneralListViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="Settings Icon" id="wdw-Se-aKk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ih3-Kt-Dcu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -369,7 +377,7 @@
         <scene sceneID="UOT-31-wg9">
             <objects>
                 <tabBarController id="ZEU-Hx-fxn" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="eV7-Xz-RPB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -386,10 +394,10 @@
             </objects>
             <point key="canvasLocation" x="-314" y="1534"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--General List View Controller-->
         <scene sceneID="CYn-Jo-sIO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lNz-Z2-5Yt" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lNz-Z2-5Yt" customClass="QVGeneralListViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SCj-YW-5JF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -407,7 +415,7 @@
         <!--Events-->
         <scene sceneID="V8J-S9-Ebx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MX8-Bz-Agm" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MX8-Bz-Agm" customClass="QVGeneralListViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Events" image="Events Icon" id="u1P-Bp-pOu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a4b-4a-LPa">
@@ -434,4 +442,5 @@
         <segue reference="oaX-4f-DHy"/>
         <segue reference="49r-Vo-T2P"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.24705882352941178" green="0.76470588235294112" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

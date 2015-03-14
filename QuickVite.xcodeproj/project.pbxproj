@@ -17,7 +17,7 @@
 		CE8A63C71AB42E5C00AE3BEC /* QVCarpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A63C51AB42E5C00AE3BEC /* QVCarpool.swift */; };
 		CE8A63C81AB42E5C00AE3BEC /* QVPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A63C61AB42E5C00AE3BEC /* QVPerson.swift */; };
 		CEDC83D51AB3FE3E007D5A5D /* QVEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */; };
-		CEDCC6841AB4430C00C8FA87 /* QVEventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCC6831AB4430C00C8FA87 /* QVEventsListViewController.swift */; };
+		CEDCC6841AB4430C00C8FA87 /* QVGeneralListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCC6831AB4430C00C8FA87 /* QVGeneralListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 		CE8A63C51AB42E5C00AE3BEC /* QVCarpool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVCarpool.swift; sourceTree = "<group>"; };
 		CE8A63C61AB42E5C00AE3BEC /* QVPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVPerson.swift; sourceTree = "<group>"; };
 		CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVEvent.swift; sourceTree = "<group>"; };
-		CEDCC6831AB4430C00C8FA87 /* QVEventsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVEventsListViewController.swift; sourceTree = "<group>"; };
+		CEDCC6831AB4430C00C8FA87 /* QVGeneralListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVGeneralListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 		CE8A63CA1AB42E7500AE3BEC /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CEDCC6831AB4430C00C8FA87 /* QVEventsListViewController.swift */,
+				CEDCC6831AB4430C00C8FA87 /* QVGeneralListViewController.swift */,
 				CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */,
 				CE0557A91AB3DB9000FFDCE7 /* QVAddEventViewController.swift */,
 			);
@@ -252,7 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDCC6841AB4430C00C8FA87 /* QVEventsListViewController.swift in Sources */,
+				CEDCC6841AB4430C00C8FA87 /* QVGeneralListViewController.swift in Sources */,
 				CE0557AC1AB3DB9000FFDCE7 /* QVEventViewController.swift in Sources */,
 				CE8A63C71AB42E5C00AE3BEC /* QVCarpool.swift in Sources */,
 				CEDC83D51AB3FE3E007D5A5D /* QVEvent.swift in Sources */,
