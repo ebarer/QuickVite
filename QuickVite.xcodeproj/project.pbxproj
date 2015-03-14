@@ -85,8 +85,8 @@
 				CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */,
 				CE0557A91AB3DB9000FFDCE7 /* QVAddEventViewController.swift */,
 				CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */,
-				CE0557AD1AB3DB9000FFDCE7 /* Main.storyboard */,
 				CE0557B01AB3DB9000FFDCE7 /* Images.xcassets */,
+				CE0557AD1AB3DB9000FFDCE7 /* Main.storyboard */,
 				CE0557B21AB3DB9000FFDCE7 /* LaunchScreen.xib */,
 				CE0557A51AB3DB9000FFDCE7 /* Supporting Files */,
 			);

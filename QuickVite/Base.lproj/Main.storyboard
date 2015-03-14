@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3440" y="-242"/>
+            <point key="canvasLocation" x="3440" y="142"/>
         </scene>
         <!--Friends-->
         <scene sceneID="87L-c7-iWB">
@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIX-Qv-Dsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4156" y="-242"/>
+            <point key="canvasLocation" x="4156" y="142"/>
         </scene>
         <!--Event Details-->
         <scene sceneID="bVD-Ts-PUB">
@@ -150,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5D-p0-jn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2628" y="511"/>
+            <point key="canvasLocation" x="2628" y="911"/>
         </scene>
         <!--Friends Nearby-->
         <scene sceneID="cTb-u6-M0z">
@@ -166,6 +166,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wD2-IA-sn4" id="0Oh-Yg-Xb2">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="lNz-Z2-5Yt" kind="presentation" id="2ud-Vn-ySA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -177,13 +180,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhP-V9-XCU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="1271"/>
+            <point key="canvasLocation" x="1774" y="-221"/>
         </scene>
         <!--Friends-->
         <scene sceneID="YIC-mF-NIL">
             <objects>
                 <navigationController id="3c3-Hv-ahT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Friends" image="Nearby Icon" id="6Mc-U6-vyd"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="Friends Icon" id="6Mc-U6-vyd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YWz-se-Zfj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -194,7 +197,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7X-bn-HWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="1271"/>
+            <point key="canvasLocation" x="962" y="-221"/>
         </scene>
         <!--Invitations-->
         <scene sceneID="9DB-sb-TO0">
@@ -224,7 +227,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXg-Cf-sdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="511"/>
+            <point key="canvasLocation" x="1782" y="1295"/>
         </scene>
         <!--Invitations-->
         <scene sceneID="Ot3-09-6GN">
@@ -241,7 +244,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhS-v3-Zkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="511"/>
+            <point key="canvasLocation" x="962" y="1295"/>
         </scene>
         <!--Settings-->
         <scene sceneID="pb3-Bi-JNX">
@@ -338,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUH-uJ-rd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="-242"/>
+            <point key="canvasLocation" x="1774" y="542"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UOT-31-wg9">
@@ -359,7 +362,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Mk-ff-Dmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-122" y="1518"/>
+            <point key="canvasLocation" x="-314" y="1534"/>
         </scene>
         <!--First-->
         <scene sceneID="CYn-Jo-sIO">
@@ -378,7 +381,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qep-yT-mR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2628" y="-242"/>
+            <point key="canvasLocation" x="2628" y="142"/>
         </scene>
         <!--Events-->
         <scene sceneID="V8J-S9-Ebx">
@@ -397,18 +400,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSs-G7-hfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="-242"/>
+            <point key="canvasLocation" x="962" y="542"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Events Icon" width="25" height="29"/>
-        <image name="Invitations Icon" width="32" height="29"/>
-        <image name="Nearby Icon" width="34" height="29"/>
-        <image name="Settings Icon" width="27" height="27"/>
+        <image name="Events Icon" width="28" height="26"/>
+        <image name="Friends Icon" width="31" height="25"/>
+        <image name="Invitations Icon" width="23" height="25"/>
+        <image name="Settings Icon" width="23" height="23"/>
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qOq-EB-fjT"/>
-        <segue reference="49r-Vo-T2P"/>
+        <segue reference="2ud-Vn-ySA"/>
+        <segue reference="oaX-4f-DHy"/>
     </inferredMetricsTieBreakers>
 </document>

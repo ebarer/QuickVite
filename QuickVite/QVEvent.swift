@@ -11,8 +11,8 @@ import Foundation
 class QVEvent: NSObject {
     
     var name: String
-    var date: NSDate
-    var location: String
+    var date: NSDate?
+    var location: String?
     
     init(name: String, date dateParam: NSDate?) {
         self.name = name
