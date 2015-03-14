@@ -177,13 +177,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhP-V9-XCU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="511"/>
+            <point key="canvasLocation" x="1774" y="1271"/>
         </scene>
-        <!--Nearby-->
+        <!--Friends-->
         <scene sceneID="YIC-mF-NIL">
             <objects>
                 <navigationController id="3c3-Hv-ahT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nearby" image="Nearby Icon" id="6Mc-U6-vyd"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="Nearby Icon" id="6Mc-U6-vyd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YWz-se-Zfj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -194,7 +194,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7X-bn-HWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="511"/>
+            <point key="canvasLocation" x="962" y="1271"/>
         </scene>
         <!--Invitations-->
         <scene sceneID="9DB-sb-TO0">
@@ -224,13 +224,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXg-Cf-sdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="1283"/>
+            <point key="canvasLocation" x="1782" y="511"/>
         </scene>
         <!--Invitations-->
         <scene sceneID="Ot3-09-6GN">
             <objects>
                 <navigationController id="mI2-aT-lCh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Invitations" image="Invitations icon" id="RpQ-DZ-UXd"/>
+                    <tabBarItem key="tabBarItem" title="Invitations" image="Invitations Icon" id="RpQ-DZ-UXd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6xg-nx-Dlm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -241,7 +241,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhS-v3-Zkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="1283"/>
+            <point key="canvasLocation" x="962" y="511"/>
         </scene>
         <!--Settings-->
         <scene sceneID="pb3-Bi-JNX">
@@ -274,7 +274,7 @@
         <scene sceneID="kW0-1l-BK2">
             <objects>
                 <navigationController id="Yo3-sG-21m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="Nearby Icon" id="wdw-Se-aKk"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings Icon" id="wdw-Se-aKk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ih3-Kt-Dcu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -352,9 +352,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="MX8-Bz-Agm" kind="relationship" relationship="viewControllers" id="uu9-Kk-Jq5"/>
+                        <segue destination="3c3-Hv-ahT" kind="relationship" relationship="viewControllers" id="rZo-Dw-dDc"/>
                         <segue destination="mI2-aT-lCh" kind="relationship" relationship="viewControllers" id="7G5-9F-GpF"/>
                         <segue destination="Yo3-sG-21m" kind="relationship" relationship="viewControllers" id="OBR-xq-VQg"/>
-                        <segue destination="3c3-Hv-ahT" kind="relationship" relationship="viewControllers" id="rZo-Dw-dDc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Mk-ff-Dmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,7 +384,7 @@
         <scene sceneID="V8J-S9-Ebx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MX8-Bz-Agm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Events" image="Events icon" id="u1P-Bp-pOu"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="Events Icon" id="u1P-Bp-pOu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a4b-4a-LPa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -401,13 +401,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Events icon" width="25" height="29"/>
-        <image name="Invitations icon" width="32" height="29"/>
+        <image name="Events Icon" width="25" height="29"/>
+        <image name="Invitations Icon" width="32" height="29"/>
         <image name="Nearby Icon" width="34" height="29"/>
+        <image name="Settings Icon" width="27" height="27"/>
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oaX-4f-DHy"/>
+        <segue reference="qOq-EB-fjT"/>
         <segue reference="49r-Vo-T2P"/>
     </inferredMetricsTieBreakers>
 </document>
