@@ -11,6 +11,14 @@ import Foundation
 class QVEvent: NSObject {
     
     var name: String
-    var date: NSDate
-    var location: String
+    var date: NSDate?
+    
+    init(name: String, date dateParam: NSDate?) {
+        self.name = name
+        
+        if let newDate = dateParam {
+            self.date = newDate
+        }
+    }
+    
 }
