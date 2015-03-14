@@ -8,19 +8,32 @@
 
 import UIKit
 
-class QVAddEventFriendsViewController: UIViewController {
+class QVAddEventFriendsViewController: UITableViewController, UINavigationControllerDelegate {
     
     var newEvent: QVEvent?
-    let friendList:[String]?
     
-    let test:Bool = false
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return friendList.count
+    }
     
-    @IBOutlet weak var testField: UITextField!
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as UITableViewCell
+        let item = friendList[indexPath.row]
+        cell.textLabel?.text = item
+        
+//        if (item.isCompleted) {
+//            cell.accessoryType = .Checkmark
+//            cell.imageView?.image = item.photo
+//        } else {
+//            cell.accessoryType = .None
+//            cell.imageView?.image = nil
+//        }
+        
+        return cell
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        testField.text = newEvent?.type
 
         // Do any additional setup after loading the view.
     }
