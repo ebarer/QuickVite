@@ -26,8 +26,8 @@ class QVEvent: NSObject {
         let urlAsString = "http://206.12.55.70:5000/persons"
         let url = NSURL(string: urlAsString)!
         let request = NSURLRequest(URL: url)
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), { (response, data, error) -> Void in
-            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error: nil) as NSDictionary
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error: nil) as! NSDictionary
 
         })
         
@@ -42,7 +42,7 @@ class QVEvent: NSObject {
         request.HTTPMethod = "POST"
         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(data, options: nil, error: nil)
         
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), { (response, data, error) -> Void in
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             
         })
         
