@@ -16,8 +16,9 @@ class QVAddEventViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var eventType: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var dateValue: UILabel!
-    @IBOutlet weak var nextEvent: UIBarButtonItem!
+    @IBOutlet weak var eventLocation: UILabel!
     
+    @IBOutlet weak var nextEvent: UIBarButtonItem!
 
     @IBAction func cancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -26,7 +27,11 @@ class QVAddEventViewController: UITableViewController, UITextFieldDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DoneItem"{
-
+            newEvent?.type = eventType.text
+            newEvent?.date = datePicker.date
+            newEvent?.location = eventLocation.text
+            
+            
         }
     }
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mh3-w1-vJn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mh3-w1-vJn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -127,6 +127,7 @@
                     <connections>
                         <outlet property="datePicker" destination="OWd-67-e4a" id="buG-Cc-pSh"/>
                         <outlet property="dateValue" destination="pto-0h-7Bu" id="kXW-8F-ahY"/>
+                        <outlet property="eventLocation" destination="PY5-7h-CXG" id="FGD-ZY-bfr"/>
                         <outlet property="eventType" destination="sIO-iS-vjx" id="4EC-N1-aQa"/>
                         <outlet property="nextEvent" destination="TtV-wY-aXe" id="ICw-hl-f6A"/>
                     </connections>
