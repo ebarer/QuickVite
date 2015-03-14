@@ -377,7 +377,7 @@
         <scene sceneID="UOT-31-wg9">
             <objects>
                 <tabBarController id="ZEU-Hx-fxn" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="eV7-Xz-RPB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

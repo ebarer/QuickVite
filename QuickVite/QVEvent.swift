@@ -14,11 +14,15 @@ class QVEvent: NSObject {
     var date: NSDate?
     var location: String?
     
-    init(type: String, date dateParam: NSDate?, location locationParam: String) {
+    init(type: String, date dateParam: NSDate?, location locationParam: String?) {
         self.type = type
         
         if let newDate = dateParam {
             self.date = newDate
+        }
+        
+        if let newLocation = locationParam {
+            self.location = newLocation
         }
     }
     
@@ -33,8 +37,8 @@ class QVEvent: NSObject {
         
     }
     
-    func postEvent(data: NSData) {
-        let urlAsString = "www.inserturlhere.com"
+    func postEvent(data: AnyObject) {
+        let urlAsString = "http://206.12.55.70:5000/getNames"
         let url = NSURL(string: urlAsString)!
         
         let request = NSMutableURLRequest(URL: url)
