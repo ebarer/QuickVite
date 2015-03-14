@@ -8,67 +8,74 @@
 
 import UIKit
 
-class QVAddEventViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
+class QVAddEventViewController: UITableViewController, UITextFieldDelegate {
     
     var newEvent: QVEvent?
-    var typePickerIndex: NSIndexPath?
-    var datePickerIndex: NSIndexPath?
+
+    
+    @IBOutlet weak var eventType: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var dateValue: UILabel!
+    @IBOutlet weak var eventLocation: UILabel!
+    
+    @IBOutlet weak var nextEvent: UIBarButtonItem!
 
     @IBAction func cancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+        eventType.resignFirstResponder()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DoneItem"{
-
+            newEvent?.type = eventType.text
+            newEvent?.date = datePicker.date
+            newEvent?.location = eventLocation.text
+            
+            
         }
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        tableView.rowHeight = 43
-        switch indexPath.row {
-            case 0:
-                let cell = tableView.dequeueReusableCellWithIdentifier("addEventType", forIndexPath: indexPath) as UITableViewCell
-                return cell
-            case 1:
-                let cell = tableView.dequeueReusableCellWithIdentifier("addEventTypePicker", forIndexPath: indexPath) as UITableViewCell
-                tableView.rowHeight = 0
-                typePickerIndex = indexPath
-                return cell
-            case 2:
-                let cell = tableView.dequeueReusableCellWithIdentifier("addEventDate", forIndexPath: indexPath) as UITableViewCell
-                return cell
-            case 3:
-                let cell = tableView.dequeueReusableCellWithIdentifier("addEventDatePicker", forIndexPath: indexPath) as UITableViewCell
-                tableView.rowHeight = 0
-                datePickerIndex = indexPath
-                return cell
-            case 4:
-                let cell = tableView.dequeueReusableCellWithIdentifier("addEventLocation", forIndexPath: indexPath) as UITableViewCell
-                return cell
-            default:
-                let cell = tableView.dequeueReusableCellWithIdentifier("addEventType", forIndexPath: indexPath) as UITableViewCell
-                return cell
+    override func viewDidLoad() {
+        datePicker.minimumDate = NSDate()
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        
+        datePicker.date = NSDate()
+        dateValue.text = dateFormatter.stringFromDate(datePicker.date)
+        
+        eventType.becomeFirstResponder()
+        
+        nextEvent.enabled = false
+    }
+    
+    @IBAction func setDate(datePicker:UIDatePicker) {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        dateValue.text = dateFormatter.stringFromDate(datePicker.date)
+    }
+    
+    @IBAction func setType(textField:UITextField) {
+        if (textField.text.isEmpty) {
+            nextEvent.enabled = false
+        } else {
+            nextEvent.enabled = true
         }
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        switch indexPath.row {
-        case 0:
-            let cell = tableView.dequeueReusableCellWithIdentifier("addEventTypePicker", forIndexPath: typePickerIndex!) as UITableViewCell
-            tableView.rowHeight = 164
-        case 2:
-            let cell = tableView.dequeueReusableCellWithIdentifier("addEventDate", forIndexPath: datePickerIndex!) as UITableViewCell
-            tableView.rowHeight = 164
-        default:
-            return
-        }
-
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        eventType.resignFirstResponder()
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 

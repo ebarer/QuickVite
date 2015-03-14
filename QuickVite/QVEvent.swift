@@ -49,6 +49,6 @@ class QVEvent: NSObject {
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             
         })
-        
     }
+
 }
