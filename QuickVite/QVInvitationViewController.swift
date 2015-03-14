@@ -15,11 +15,15 @@ class QVInvitationViewController: UITableViewController {
         return itemList.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ListViewCell", forIndexPath: indexPath) as UITableViewCell
+//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCellWithIdentifier("ListViewCell", forIndexPath: indexPath) as UITableViewCell
+
+//        let item = itemList[indexPath.row]
+//
+//        cell.textLabel?.text = "test"
         
-        let item = itemList[indexPath.row]
-        
-        cell.textLabel?.text = item.name
-    }
+//        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+//        
+//        }
+//    }
 }
