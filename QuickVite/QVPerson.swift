@@ -30,11 +30,11 @@ class QVPerson: NSObject {
         let url = NSURL(string: urlAsString)!
         let request = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
-            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error: nil) as! NSDictionary
-            var persons = jsonResult["persons"]! as! [[String : AnyObject]]
+            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error: nil) as NSDictionary
+            var persons = jsonResult["persons"]! as [[String : AnyObject]]
             
-            self.firstName = persons[0]["name"]! as! String
-            self.lastName = persons[0]["name"]! as! String
+            self.firstName = persons[0]["name"]! as String
+            self.lastName = persons[0]["name"]! as String
         })
     }
     
