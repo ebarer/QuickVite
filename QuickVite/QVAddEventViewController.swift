@@ -8,7 +8,13 @@
 
 import UIKit
 
-class EventViewController: UIViewController {
+class QVAddEventViewController: UIViewController {
+    
+    // New Event object
+    var newEvent: QVEvent?
+    
+    // UI Elements
+    @IBOutlet weak var nextFriends: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,5 +29,17 @@ class EventViewController: UIViewController {
     @IBAction func cancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "DoneItem"{
+            if let name = textField.text {
+                if !name.isEmpty{
+                    newItem = ScavengerHuntItem(name: name)
+                }
+            }
+        }
+    }
+
+    
 }
 
