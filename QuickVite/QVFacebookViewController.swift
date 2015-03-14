@@ -31,6 +31,14 @@ class QVFacebookViewController: UIViewController, FBLoginViewDelegate {
         }
     }
     
+    func loginViewShowingLoggedOutUser(loginView: FBLoginView!) {
+        self.tabBarController?.tabBar.hidden = true
+        if (fbkLoggedIn != false) {
+            fbkLoggedIn = false
+            self.tabBarController?.selectedIndex = 3
+        }
+    }
+    
     func loginViewFetchedUserInfo(loginView: FBLoginView!, user: FBGraphUser!) {
         let auth_token = FBSession.activeSession().accessTokenData.accessToken
         let userID = user.objectID
@@ -46,13 +54,5 @@ class QVFacebookViewController: UIViewController, FBLoginViewDelegate {
                 friendList = friendList.sorted{$0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending}
             }
         })
-    }
-    
-    func loginViewShowingLoggedOutUser(loginView: FBLoginView!) {
-        self.tabBarController?.tabBar.hidden = true
-        if (fbkLoggedIn != false) {
-            fbkLoggedIn = false
-            self.tabBarController?.selectedIndex = 3
-        }
     }
 }

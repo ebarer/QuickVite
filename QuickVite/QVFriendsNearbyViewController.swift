@@ -1,5 +1,5 @@
 //
-//  QVAddEventFriendsViewController.swift
+//  QVFriendsNearbyViewController.swift
 //  QuickVite
 //
 //  Created by Elliot Barer on 2015-03-14.
@@ -8,9 +8,7 @@
 
 import UIKit
 
-class QVAddEventFriendsViewController: UITableViewController, UINavigationControllerDelegate {
-    
-    var newEvent: QVEvent?
+class QVFriendsNearbyViewController: UITableViewController, UINavigationControllerDelegate {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return friendList.count
@@ -21,21 +19,19 @@ class QVAddEventFriendsViewController: UITableViewController, UINavigationContro
         let item = friendList[indexPath.row]
         cell.textLabel?.text = item
         
-//        if (item.isCompleted) {
-//            cell.accessoryType = .Checkmark
-//            cell.imageView?.image = item.photo
-//        } else {
-//            cell.accessoryType = .None
-//            cell.imageView?.image = nil
-//        }
+        //        if (item.isCompleted) {
+        //            cell.accessoryType = .Checkmark
+        //            cell.imageView?.image = item.photo
+        //        } else {
+        //            cell.accessoryType = .None
+        //            cell.imageView?.image = nil
+        //        }
         
         return cell
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+    
 }

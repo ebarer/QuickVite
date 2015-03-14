@@ -9,13 +9,20 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, FBLoginViewDelegate {
 
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		window?.tintColor = UIColor(red: 63.0/255, green: 195.0/255, blue: 128.0/255, alpha: 1.0)
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        
+        var fbLoginView: FBLoginView!
+        
+        fbLoginView.delegate = self
+        fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
+        fbLoginView.loginBehavior = FBSessionLoginBehavior.UseSystemAccountIfPresent
+        
         return true
     }
 
