@@ -22,11 +22,7 @@ class QVFacebookViewController: UIViewController, FBLoginViewDelegate {
     
     // Figure out how to switch viewcontroller when logging in/out
     func loginViewShowingLoggedInUser(loginView: FBLoginView!) {
-        var window: UIWindow?
-        var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var initialViewController = storyboard.instantiateViewControllerWithIdentifier("QVTabBarController") as UITabBarController
-        window?.rootViewController = initialViewController
-        window?.makeKeyAndVisible()
+        self.parentViewController?.tabBarController?.tabBar.hidden = false
     }
     
     func loginViewFetchedUserInfo(loginView: FBLoginView!, user: FBGraphUser!) {
@@ -43,6 +39,6 @@ class QVFacebookViewController: UIViewController, FBLoginViewDelegate {
     }
     
     func loginViewShowingLoggedOutUser(loginView: FBLoginView!) {
-        println("User Logged Out")
+        self.parentViewController?.tabBarController?.tabBar.hidden = true
     }
 }

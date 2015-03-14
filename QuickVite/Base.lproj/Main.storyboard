@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Event-->
+        <!--New Event-->
         <scene sceneID="5kh-79-1hY">
             <objects>
                 <tableViewController id="SwA-8Z-Ic2" customClass="QVAddEventViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,6 +27,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="setType:" destination="SwA-8Z-Ic2" eventType="editingChanged" id="vhB-Li-FdX"/>
+                                                        <outlet property="delegate" destination="SwA-8Z-Ic2" id="1jy-tC-hOp"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -112,7 +113,7 @@
                             <outlet property="delegate" destination="SwA-8Z-Ic2" id="jqg-HO-ArA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Event" id="teP-Wn-INl">
+                    <navigationItem key="navigationItem" title="New Event" id="teP-Wn-INl">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SXt-hM-c0G">
                             <connections>
                                 <action selector="cancel:" destination="SwA-8Z-Ic2" id="WVC-7F-Ixy"/>
@@ -136,7 +137,7 @@
             </objects>
             <point key="canvasLocation" x="2622" y="206"/>
         </scene>
-        <!--Friends-->
+        <!--Invite Friends-->
         <scene sceneID="87L-c7-iWB">
             <objects>
                 <viewController id="Mlk-zc-Xf8" customClass="QVAddEventFriendsViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,7 +160,7 @@
                     <toolbarItems>
                         <barButtonItem title="Item" id="Yqq-oD-2Zf"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Friends" id="Ajy-d7-1gm">
+                    <navigationItem key="navigationItem" title="Invite Friends" id="Ajy-d7-1gm">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="bJ5-Db-Cls"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -375,10 +376,10 @@
             </objects>
             <point key="canvasLocation" x="-974" y="1562"/>
         </scene>
-        <!--Facebook-->
+        <!--Login-->
         <scene sceneID="Iei-jQ-Njp">
             <objects>
-                <viewController storyboardIdentifier="QVLoginViewController" title="Facebook" id="jdn-y3-4az" customClass="QVFacebookViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QVLoginViewController" title="Login" id="jdn-y3-4az" customClass="QVFacebookViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K0e-bw-eCa"/>
                         <viewControllerLayoutGuide type="bottom" id="Qzd-gy-Hqw"/>
@@ -401,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vr-9n-rvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="2166"/>
+            <point key="canvasLocation" x="1018" y="2108"/>
         </scene>
         <!--General List View Controller-->
         <scene sceneID="CYn-Jo-sIO">
@@ -448,8 +449,8 @@
         <image name="Settings Icon" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Qf-uH-Fxd"/>
         <segue reference="qOq-EB-fjT"/>
+        <segue reference="2ud-Vn-ySA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.24705882352941178" green="0.76470588235294112" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
