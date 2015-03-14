@@ -48,12 +48,12 @@ class QVAddEventViewController: UIViewController {
     // UIView Elements
     //
     
-    @IBAction func datePicker(sender: UITextField) {
-        var datePickerView  : UIDatePicker = UIDatePicker()
-        datePickerView.datePickerMode = UIDatePickerMode.Date
-        sender.inputView = datePickerView
-        datePickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
-    }
+//    @IBAction func datePicker(sender: UITextField) {
+//        var datePickerView  : UIDatePicker = UIDatePicker()
+//        datePickerView.datePickerMode = UIDatePickerMode.Date
+//        sender.inputView = datePickerView
+//        datePickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+//    }
     
 }
 
