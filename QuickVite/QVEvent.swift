@@ -37,14 +37,24 @@ class QVEvent: NSObject {
         
     }
     
-    func postEvent(data: AnyObject) {
+    func postEvent() {
         let urlAsString = "http://206.12.55.70:5000/getNames"
         let url = NSURL(string: urlAsString)!
-        
         let request = NSMutableURLRequest(URL: url)
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-DD hh:mm" //format style. Browse online to get a format that fits your needs.
+        var dateString = dateFormatter.stringFromDate(self.date!)
+        
+        var nsArrayFoo = NSDictionary()
+        nsArrayFoo.setValue(dateString, forKey: "date")
+        nsArrayFoo.setValue(self.type, forKey: "type")
+        nsArrayFoo.setValue(self.location, forKey: "location")
+        
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.HTTPMethod = "POST"
-        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(data, options: nil, error: nil)
+        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(nsArrayFoo, options: nil, error: nil)
+        
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             
