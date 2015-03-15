@@ -10,6 +10,8 @@ import Foundation
 
 class QVEvent: NSObject {
     
+    
+    var eventID: String
     var ownerID: String
     var type: String
     var date: NSDate?
@@ -18,6 +20,7 @@ class QVEvent: NSObject {
     init(ownerID: String, type: String, date dateParam: NSDate?, location locationParam: String?) {
         self.type = type
         self.ownerID = ownerID
+        self.eventID = "0"
 
         if let newDate = dateParam {
             self.date = newDate
@@ -61,7 +64,27 @@ class QVEvent: NSObject {
         
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
-            
+            if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as? NSDictionary {
+                // json will parse numbers as integers
+                let id = jsonResult["id"] as NSNumber
+                self.eventID = id.stringValue
+            }
+        })
+    }
+
+    
+    func getAttendees() {
+        let urlAsString = VQ.url + "/quickvite/api/getEventPeople/" + self.eventID
+        let url = NSURL(string: urlAsString)!
+        let request = NSMutableURLRequest(URL: url)
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.HTTPMethod = "GET"
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+            if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as? NSDictionary {
+                
+            }
         })
     }
 
