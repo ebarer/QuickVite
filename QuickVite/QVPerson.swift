@@ -50,9 +50,7 @@ class QVPerson: NSObject {
         request.HTTPMethod = "POST"
         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(dict, options: nil, error: nil)
         
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
-
-        })
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in })
     }
     
     func getEvents() {

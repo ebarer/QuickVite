@@ -10,18 +10,16 @@ import UIKit
 
 class QVInvitation {
     
-    var userImage:UIImage,
-    firstName:String,
-    lastName:String,
-    type:String,
-    when:String
+    var eventid:String
+    var fbkid:String
+    var isDriving:Bool
+    var accepted:Bool
     
-    init(userImage:UIImage, firstName:String, lastName:String, type:String, when:String) {
-        self.userImage = userImage
-        self.firstName = firstName
-        self.lastName = lastName
-        self.type = type
-        self.when = when
+    init(eventid:String, fbkid:String, isDriving:Bool, accepted:Bool) {
+        self.eventid = eventid
+        self.fbkid = fbkid
+        self.isDriving = isDriving
+        self.accepted = accepted
     }
     
     class func getInvitations() {
@@ -44,7 +42,7 @@ class QVInvitation {
     func postInvitation() {
         let urlAsString = VQ.url + "/quickvite/api/createInvitations"
         let url = NSURL(string: urlAsString)!
-        var dict = ["firstName": self.firstName, "lastName": self.lastName, "type": self.type, "when": self.when]
+        var dict = ["eventid": self.eventid, "fbkid": self.fbkid, "isDriving": self.isDriving, "accepted": self.accepted]
         
         let request = NSMutableURLRequest(URL: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")

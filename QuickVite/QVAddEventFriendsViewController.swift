@@ -36,12 +36,8 @@ class QVAddEventFriendsViewController: UITableViewController, UINavigationContro
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         cell?.accessoryType = .Checkmark
         
-        if let nameStr = cell?.textLabel?.text {
-            var name = split(nameStr) {$0 == " "}
-            var nameFirst:String = name[0]
-            var nameLast:String = name[1]
-            invitees.append(QVInvitation(userImage: nil, firstName: nameFirst, lastName: nameLast, type: newEvent!.type, when: newEvent!.date))
-        }
+        let invitee = QVInvitation(eventid: newEvent!.eventID, fbkid: friendListID[indexPath.row], isDriving: false, accepted: false)
+        invitees.append(invitee)
         
         checkedRows.append(indexPath.row)
     }

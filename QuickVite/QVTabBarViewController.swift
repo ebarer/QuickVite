@@ -14,6 +14,7 @@ struct VQ {
 
 var fbkLoggedIn: Bool = false
 var friendList = [String]()
+var friendListID = [String]()
 let locManager = CLLocationManager()
 
 class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
@@ -24,9 +25,11 @@ class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
         super.viewDidLoad()
         
         if (FBSession.activeSession().accessTokenData != nil) {
+            println("Facebook Session Active")
             fbkLoggedIn = true
             self.selectedIndex = 0
         } else {
+            println("Facebook Session Inactive")
             fbkLoggedIn = false
             self.selectedIndex = 2
         }
@@ -50,9 +53,13 @@ class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
         
         FBRequestConnection.startWithGraphPath("me/taggable_friends", completionHandler: {(connection, result, error) -> Void in
             if let friends = result["data"] as? [[String:AnyObject]] {
+                // Establish fbk friendlist, and IDs
                 for friend in friends {
                     let name = friend["name"] as String
                     friendList.append(name)
+                    
+                    let fbkid = friend["id"] as String
+                    friendListID.append(fbkid)
                 }
                 
                 var descriptor: NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true, selector: "localizedStandardCompare:")
