@@ -619,10 +619,10 @@
         <scene sceneID="8mc-6I-uGT">
             <objects>
                 <tableViewController id="3PV-f6-yH4" customClass="QVEventsViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="hzW-YF-EpL">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hzW-YF-EpL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="attendingEventCell" id="NCu-Pu-jdd">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -631,16 +631,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="Afm-Rv-tXZ" kind="show" identifier="" id="Miz-Uu-6Vv"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newEventCell" id="Qjo-AT-mS4">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qjo-AT-mS4" id="wJ0-pS-rKL">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="lNz-Z2-5Yt" kind="presentation" id="wMg-WO-OmB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -692,8 +682,7 @@
         <image name="Settings Icon" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fVi-vG-5XH"/>
-        <segue reference="GII-mS-CdN"/>
+        <segue reference="Miz-Uu-6Vv"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.24705882352941178" green="0.76470588235294112" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

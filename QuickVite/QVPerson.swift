@@ -53,8 +53,7 @@ class QVPerson: NSObject {
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in })
     }
     
-    func getEvents() {
-        
+    func getEvents(controller:QVEventsViewController) {
         var facebookID = NSUserDefaults.standardUserDefaults().objectForKey("facebookID") as String;
 
         let urlAsString = VQ.url + "/quickvite/api/getEvents/" + facebookID
@@ -66,7 +65,13 @@ class QVPerson: NSObject {
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as? NSDictionary {
-
+                var QVEvents = [QVEvent]()
+                var events = jsonResult["events"] as [NSDictionary]
+                for event: NSDictionary in events {
+                    var newQVEvent = QVEvent(ownerID: event["event_id"] as String, type: event["type"] as String, date: event["date"] as? NSDate, location: event["location"] as? String)
+                    QVEvents.append(newQVEvent)
+                }
+                controller.saveEvents(QVEvents);
             }
         })
     }
