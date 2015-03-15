@@ -11,7 +11,7 @@ import UIKit
 class QVEventViewController: UIViewController, UITableViewDataSource {
     
     var aEvent:QVEvent?
-    var attendees:[QVPerson]?
+    var attendees = [QVPerson]()
     var haveAttendees = false
     
     @IBOutlet weak var eventName: UILabel!
@@ -60,20 +60,14 @@ class QVEventViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let ppl = attendees {
-            return ppl.count
-        }
-        
-        return 0
+        return attendees.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("attendeeCell", forIndexPath: indexPath) as UITableViewCell
         
-        if let people = attendees {
-            if let person = people[indexPath.row] as QVPerson? {
-                cell.textLabel?.text = person.firstName + " " + person.lastName
-            }
+        if let person = attendees[indexPath.row] as QVPerson? {
+            cell.textLabel?.text = person.firstName + " " + person.lastName
         }
         
         return cell

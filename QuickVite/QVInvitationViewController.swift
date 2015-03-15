@@ -36,8 +36,6 @@ class QVInvitationViewController: UITableViewController {
                 //
                 if let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary {
                     
-//                    println(jsonData)
-                    
                     var dataArr: [NSDictionary] = jsonData[self.KEY_EVENTS] as [NSDictionary]
                     
                     for i in dataArr {
@@ -96,10 +94,7 @@ class QVInvitationViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("QVInvitationViewCell") as QVInvitationTableViewCell
         cell.hostName?.text = self.names[indexPath.row] as String
         cell.eventDate?.text = self.time[indexPath.row] as String
-        cell.eventType?.text = self.eTypes[indexPath.row] as String
-        
-        println(self.eTypes[indexPath.row])
-        
+        cell.eventType?.text = self.eTypes[indexPath.row] as String        
         
         let urlAsString = self.imgLinks[indexPath.row] as String
         let url = NSURL(string: urlAsString)!

@@ -97,10 +97,10 @@
 		CE0557991AB3DB9000FFDCE7 = {
 			isa = PBXGroup;
 			children = (
-				CE3454391AB5ACE100614576 /* CoreLocation.framework */,
 				CE0557A41AB3DB9000FFDCE7 /* QuickVite */,
 				CE0557BC1AB3DB9000FFDCE7 /* QuickViteTests */,
 				CE0557A31AB3DB9000FFDCE7 /* Products */,
+				CE3454391AB5ACE100614576 /* CoreLocation.framework */,
 				CEFD83E61AB5953E00A424EC /* MapKit.framework */,
 				CE5D87521AB47C75009D690B /* FacebookSDK.framework */,
 			);

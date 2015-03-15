@@ -24,11 +24,9 @@ class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
         super.viewDidLoad()
         
         if (FBSession.activeSession().accessTokenData != nil) {
-            println("Facebook Session Active")
             fbkLoggedIn = true
             self.selectedIndex = 0
         } else {
-            println("Facebook Session Inactive")
             fbkLoggedIn = false
             self.selectedIndex = 2
         }

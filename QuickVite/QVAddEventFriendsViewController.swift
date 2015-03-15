@@ -10,8 +10,8 @@ import UIKit
 
 class QVAddEventFriendsViewController: UITableViewController, UINavigationControllerDelegate {
     
-    var newEvent: QVEvent?
-    
+    var newEvent:QVEvent?
+    var invitees = [QVPerson]()
     var checkedRows = [Int]()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,7 +36,6 @@ class QVAddEventFriendsViewController: UITableViewController, UINavigationContro
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println(indexPath)
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         cell?.accessoryType = .Checkmark
         checkedRows.append(indexPath.row)
