@@ -169,13 +169,14 @@
                     <navigationItem key="navigationItem" title="Invite Friends" id="fbY-1b-utn">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="0ok-rn-TF0">
                             <connections>
-                                <action selector="doneCreatingEvent:" destination="yyE-uW-yD1" id="5ST-gy-6Rh"/>
-                                <segue destination="Afm-Rv-tXZ" kind="custom" identifier="eventCreateSegue" id="FCE-My-eWX"/>
+                                <action selector="doneEventCreation:" destination="yyE-uW-yD1" id="Qp4-Fe-L0R"/>
+                                <segue destination="hJ8-Lw-C1L" kind="unwind" unwindAction="unwindToEvent:" id="cAj-10-Tw9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehX-rA-Zny" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hJ8-Lw-C1L" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3420" y="206"/>
         </scene>
@@ -192,7 +193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hA1-Qv-HmF">
-                                <rect key="frame" x="316" y="206" width="42" height="21"/>
+                                <rect key="frame" x="279" y="238" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -207,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5D-p0-jn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3420" y="1359"/>
+            <point key="canvasLocation" x="1854" y="1359"/>
         </scene>
         <!--Friends Nearby-->
         <scene sceneID="cTb-u6-M0z">
@@ -318,7 +319,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXg-Cf-sdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008" y="1358"/>
+            <point key="canvasLocation" x="1000" y="1359"/>
         </scene>
         <!--Invitations-->
         <scene sceneID="Ot3-09-6GN">
@@ -336,59 +337,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhS-v3-Zkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="188" y="1359"/>
-        </scene>
-        <!--Events-->
-        <scene sceneID="kFb-lM-bhv">
-            <objects>
-                <viewController id="aVv-ct-B9Y" customClass="QVEventViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KaH-vX-dgM"/>
-                        <viewControllerLayoutGuide type="bottom" id="qZD-Q5-p27"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2mE-wP-O9L">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="L7T-pM-sEs">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Z6q-o3-cRt">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z6q-o3-cRt" id="v5Q-P6-ePM">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Afm-Rv-tXZ" kind="show" id="oaX-4f-DHy"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qw9-EQ-3RU">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qw9-EQ-3RU" id="rC2-2g-RAM">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="lNz-Z2-5Yt" kind="presentation" id="3Qf-uH-Fxd"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Events" id="9gE-7V-MrT">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Q8t-R1-XHa">
-                            <connections>
-                                <segue destination="lNz-Z2-5Yt" kind="presentation" id="49r-Vo-T2P"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LUH-uJ-rd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1000" y="606"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="UOT-31-wg9">
@@ -440,7 +388,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMY-dG-Rd7" customClass="FBLoginView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMY-dG-Rd7" customClass="FBLoginView">
                                 <rect key="frame" x="127" y="407" width="346" height="104"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -448,6 +396,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="IMY-dG-Rd7" secondAttribute="centerX" id="29N-lu-k9W"/>
+                            <constraint firstItem="IMY-dG-Rd7" firstAttribute="leading" secondItem="uv1-G8-516" secondAttribute="leading" constant="127" id="WUT-T7-NCT"/>
+                            <constraint firstItem="IMY-dG-Rd7" firstAttribute="top" secondItem="K0e-bw-eCa" secondAttribute="bottom" constant="343" id="afV-CS-Pfa"/>
                             <constraint firstItem="Qzd-gy-Hqw" firstAttribute="top" secondItem="IMY-dG-Rd7" secondAttribute="bottom" constant="50" id="cFQ-tY-Mwx"/>
                             <constraint firstItem="Qzd-gy-Hqw" firstAttribute="top" secondItem="IMY-dG-Rd7" secondAttribute="bottom" constant="50" id="ziR-LY-opA"/>
                         </constraints>
@@ -486,6 +436,55 @@
             <point key="canvasLocation" x="1854" y="206"/>
         </scene>
         <!--Events-->
+        <scene sceneID="8mc-6I-uGT">
+            <objects>
+                <tableViewController id="3PV-f6-yH4" customClass="QVEventTableViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hzW-YF-EpL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="attendingEventCell" id="NCu-Pu-jdd">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NCu-Pu-jdd" id="HFp-kS-yd6">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Afm-Rv-tXZ" kind="show" identifier="" id="Miz-Uu-6Vv"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newEventCell" id="Qjo-AT-mS4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qjo-AT-mS4" id="wJ0-pS-rKL">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="lNz-Z2-5Yt" kind="presentation" id="wMg-WO-OmB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3PV-f6-yH4" id="DVK-E1-dVd"/>
+                            <outlet property="delegate" destination="3PV-f6-yH4" id="si2-SZ-zdv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Events" id="bKN-bh-d80">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Eir-zj-Fey">
+                            <connections>
+                                <segue destination="lNz-Z2-5Yt" kind="presentation" id="fVi-vG-5XH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Afm-Rv-tXZ" kind="show" identifier="moveToEvent" id="CKT-xf-9rM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DV8-aW-A97" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="606"/>
+        </scene>
+        <!--Events-->
         <scene sceneID="V8J-S9-Ebx">
             <objects>
                 <navigationController storyboardIdentifier="homeVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MX8-Bz-Agm" customClass="QVGeneralViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
@@ -497,7 +496,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="aVv-ct-B9Y" kind="relationship" relationship="rootViewController" id="IYR-AR-YLX"/>
+                        <segue destination="3PV-f6-yH4" kind="relationship" relationship="rootViewController" id="51L-0I-Xdk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSs-G7-hfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -512,8 +511,8 @@
         <image name="Settings Icon" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2ud-Vn-ySA"/>
-        <segue reference="FCE-My-eWX"/>
+        <segue reference="fVi-vG-5XH"/>
+        <segue reference="CKT-xf-9rM"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.24705882352941178" green="0.76470588235294112" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
