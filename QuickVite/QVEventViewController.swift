@@ -10,12 +10,13 @@ import UIKit
 
 class QVEventViewController: UIViewController {
 
+    var aEvent: QVEvent?
     @IBOutlet weak var testText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        println(aEvent)
     }
 
     override func didReceiveMemoryWarning() {

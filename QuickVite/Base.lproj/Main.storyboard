@@ -121,7 +121,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="TtV-wY-aXe">
                             <connections>
-                                <segue destination="yyE-uW-yD1" kind="show" id="NTC-ok-qgc"/>
+                                <segue destination="yyE-uW-yD1" kind="show" identifier="addEventNext" id="NTC-ok-qgc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -356,7 +356,7 @@
         <scene sceneID="UOT-31-wg9">
             <objects>
                 <tabBarController storyboardIdentifier="QVTabBarController" id="ZEU-Hx-fxn" customClass="QVTabBarViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="eV7-Xz-RPB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -542,8 +542,8 @@
         <image name="Settings Icon" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fVi-vG-5XH"/>
         <segue reference="CKT-xf-9rM"/>
+        <segue reference="fVi-vG-5XH"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.24705882352941178" green="0.76470588235294112" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

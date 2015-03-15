@@ -12,6 +12,7 @@ struct VQ {
     static let url = "http://206.12.55.70:5000"
 }
 
+var facebookID = ""
 var fbkLoggedIn: Bool = false
 var friendList = [String]()
 

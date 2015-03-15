@@ -21,12 +21,10 @@ class QVAddEventFriendsViewController: UITableViewController, UINavigationContro
         let item = friendList[indexPath.row]
         cell.textLabel?.text = item
         cell.accessoryType = .None
-        
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         cell?.accessoryType = .Checkmark
     }
