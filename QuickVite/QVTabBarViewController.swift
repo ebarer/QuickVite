@@ -9,7 +9,7 @@
 import UIKit
 
 struct VQ {
-    static let url = "http://206.12.54.216:8080"
+    static let url = "http://206.12.54.216:5000"
 }
 
 var facebookID = String()

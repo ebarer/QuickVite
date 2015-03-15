@@ -13,4 +13,5 @@ class QVInvitationTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var hostName: UILabel!
     @IBOutlet weak var eventDate: UILabel!
+    @IBOutlet weak var eventType: UILabel!
 }

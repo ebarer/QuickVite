@@ -10,26 +10,45 @@ import UIKit
 
 class QVInvitationViewController: UITableViewController {
     
+    let KEY_NAME = "name"
+    let KEY_TIME = "time"
+    let KEY_IMG = "imgLink"
+    let KEY_ETYPES = "type"
+    let KEY_EVENTS = "people"
+    
     var names = [String]()
-    var images = [String]()
+    var imgLinks = [String]()
+    var time = [String]()
+    var eTypes = [String]()
     
     @IBOutlet var mTableView: UITableView!
     
     //async call for getting event invitations
     func getInvitations() {
+        
         let urlAsString = VQ.url + "/invitations"
         let url = NSURL(string: urlAsString)!
         let request = NSURLRequest(URL: url)
+        
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
 
-            if let data = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary {
-                if let data = data["people"]! as? [[String:AnyObject]] {
-                    for i in data {
-//                        self.names.append(i["name"])
+            if error == nil && data != nil {
+                //
+                if let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary {
+                    
+//                    println(jsonData)
+                    
+                    var dataArr: [NSDictionary] = jsonData[self.KEY_EVENTS] as [NSDictionary]
+                    
+                    for i in dataArr {
+                        self.names.append(i[self.KEY_NAME]! as String)
+                        self.imgLinks.append(i[self.KEY_IMG]! as String)
+                        self.time.append(i[self.KEY_TIME]! as String)
+                        self.eTypes.append(i[self.KEY_ETYPES]! as String)
                     }
+                    
+                    self.mTableView.reloadData()
                 }
-                
-                self.mTableView.reloadData()
             }
             
         })
@@ -50,7 +69,21 @@ class QVInvitationViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("QVInvitationViewCell") as QVInvitationTableViewCell
-//        cell.textLabel?.text = self.names[indexPath.row] as String
+        cell.hostName?.text = self.names[indexPath.row] as String
+        cell.eventDate?.text = self.time[indexPath.row] as String
+        cell.eventType?.text = self.eTypes[indexPath.row] as String
+        
+        println(self.eTypes[indexPath.row])
+        
+        
+        let urlAsString = self.imgLinks[indexPath.row] as String
+        let url = NSURL(string: urlAsString)!
+        let request = NSURLRequest(URL: url)
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+            
+            cell.profileImage.image = UIImage(data: data)
+        })
+
         return cell
     }
     
