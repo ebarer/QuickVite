@@ -66,6 +66,31 @@ class QVInvitationViewController: UITableViewController {
         return self.names.count
     }
     
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+        let action = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Decline") { (action, row) -> Void in
+            if (row.row == 10) {
+                // do some stuff
+            } else {
+                // do other stuff
+            }
+        }
+        
+        let action2 = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Attend") { (action, row) -> Void in
+            //do something for a a given row
+        }
+        
+        return [action, action2]
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            // delete from the model
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        } else if(editingStyle == UITableViewCellEditingStyle.Insert) {
+            // do something else here
+        }
+    }
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("QVInvitationViewCell") as QVInvitationTableViewCell
