@@ -12,21 +12,34 @@ class QVAddEventFriendsViewController: UITableViewController, UINavigationContro
     
     var newEvent: QVEvent?
     
+    var checkedRows = [Int]()
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return friendList.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        // Fetch Item
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as UITableViewCell
         let item = friendList[indexPath.row]
         cell.textLabel?.text = item
-        cell.accessoryType = .None
+        
+        if contains(checkedRows, indexPath.row) {
+            cell.accessoryType = .Checkmark
+        } else {
+            cell.accessoryType = .None
+        }
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println(indexPath)
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         cell?.accessoryType = .Checkmark
+        checkedRows.append(indexPath.row)
     }
 
     override func viewDidLoad() {
