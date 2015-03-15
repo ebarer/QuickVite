@@ -22,12 +22,13 @@ class QVInvitationViewController: UITableViewController {
         let request = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             
-            var data = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as NSDictionary
-            if let data = data["people"]! as? [[String:AnyObject]] {
-                //                print(data.count)
-                for i in data {
-                    //                    println(i)
-                    self.names.append(i["name"]!)
+
+
+            if let data = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary {
+                if let data = data["people"]! as? [[String:AnyObject]] {
+                    for i in data {
+                        self.names.append(i["name"] as String)
+                    }
                 }
                 
                 self.mTableView.reloadData()
