@@ -9,12 +9,13 @@
 import UIKit
 
 struct VQ {
-    static let url = "http://206.12.55.70:5000"
+    static let url = "http://206.12.54.216:8080"
 }
 
 var facebookID = ""
 var fbkLoggedIn: Bool = false
 var friendList = [String]()
+var facebookID = ""
 
 class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
     
@@ -57,6 +58,12 @@ class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
                 var descriptor: NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true, selector: "localizedStandardCompare:")
                 friendList = friendList.sorted{$0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending}
             }
+        })
+        
+        FBRequestConnection.startWithGraphPath("me", completionHandler: {(connection, result, error) -> Void in
+            facebookID = result.objectID
+            var newQVPerson = QVPerson(firstName: result.first_name, lastName: result.last_name)
+            newQVPerson.postPerson()
         })
     }
 

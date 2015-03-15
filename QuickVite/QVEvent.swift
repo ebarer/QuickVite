@@ -54,7 +54,6 @@ class QVEvent: NSObject {
         if let loc = self.location {
             dict["location"] = loc
         }
-
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.HTTPMethod = "POST"
