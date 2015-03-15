@@ -34,6 +34,7 @@ class QVAddEventFriendsViewController: UITableViewController, UINavigationContro
     }
     
     @IBAction func doneEventCreation(sender: UIBarButtonItem) {
+        self.newEvent?.postEvent()
         dismissViewControllerAnimated(true, completion: nil)
     }
     

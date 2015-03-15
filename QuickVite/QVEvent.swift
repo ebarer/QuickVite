@@ -18,7 +18,7 @@ class QVEvent: NSObject {
     init(ownerID: String, type: String, date dateParam: NSDate?, location locationParam: String?) {
         self.type = type
         self.ownerID = ownerID
-        
+
         if let newDate = dateParam {
             self.date = newDate
         }
@@ -40,7 +40,7 @@ class QVEvent: NSObject {
     }
     
     func postEvent() {
-        let urlAsString = VQ.url + "/getInfo"
+        let urlAsString = VQ.url + "/quickvite/api/createEvent"
         let url = NSURL(string: urlAsString)!
         let request = NSMutableURLRequest(URL: url)
         
@@ -61,7 +61,7 @@ class QVEvent: NSObject {
         
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
-            println(self.ownerID)
+            
         })
     }
 
