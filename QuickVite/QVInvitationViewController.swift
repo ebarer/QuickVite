@@ -17,17 +17,17 @@ class QVInvitationViewController: UITableViewController {
     
     //async call for getting event invitations
     func getInvitations() {
-        println("claeed get invitations")
         let urlAsString = VQ.url + "/invitations"
         let url = NSURL(string: urlAsString)!
         let request = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             
-            
-            if let data = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? NSDictionary {
+
+
+            if let data = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary {
                 if let data = data["people"]! as? [[String:AnyObject]] {
                     for i in data {
-                        self.names.append(i["name"])
+                        self.names.append(i["name"] as String)
                     }
                 }
                 
@@ -35,6 +35,8 @@ class QVInvitationViewController: UITableViewController {
             }
             
         })
+        
+        
     }
     
     override func viewDidLoad() {
@@ -59,8 +61,5 @@ class QVInvitationViewController: UITableViewController {
         return cell
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1;
-    }
     
 }
