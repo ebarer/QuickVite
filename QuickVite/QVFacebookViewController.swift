@@ -9,6 +9,7 @@
 import UIKit
 
 var friendList = [String]()
+var facebookID = ""
 
 class QVFacebookViewController: UIViewController, FBLoginViewDelegate {
     
@@ -53,6 +54,10 @@ class QVFacebookViewController: UIViewController, FBLoginViewDelegate {
                 var descriptor: NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true, selector: "localizedStandardCompare:")
                 friendList = friendList.sorted{$0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending}
             }
+        })
+        
+        FBRequestConnection.startWithGraphPath("me", completionHandler: {(connection, result, error) -> Void in
+            facebookID = result.objectID
         })
     }
 }
