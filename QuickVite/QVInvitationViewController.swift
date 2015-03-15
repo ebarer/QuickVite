@@ -11,15 +11,21 @@ import UIKit
 class QVInvitationViewController: UITableViewController {
     
     let KEY_NAME = "name"
-    let KEY_TIME = "time"
+    let KEY_TIME = "date"
     let KEY_IMG = "imgLink"
     let KEY_ETYPES = "type"
     let KEY_EVENTS = "people"
+    let KEY_EVID = "evid"
+    
+//    let fbID = NSUserDefaults.standardUserDefaults().objectForKey("FacebookID") as String
+    let fbID = ""
     
     var names = [String]()
     var imgLinks = [String]()
     var time = [String]()
     var eTypes = [String]()
+    var evIds = [String]()
+    
     
     @IBOutlet var mTableView: UITableView!
     
@@ -43,6 +49,7 @@ class QVInvitationViewController: UITableViewController {
                         self.imgLinks.append(i[self.KEY_IMG]! as String)
                         self.time.append(i[self.KEY_TIME]! as String)
                         self.eTypes.append(i[self.KEY_ETYPES]! as String)
+                        self.evIds.append(i[self.KEY_EVID]! as String)
                     }
                     
                     self.mTableView.reloadData()
@@ -65,17 +72,47 @@ class QVInvitationViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+        
+        let urlAsString = VQ.url + "/invitations/update"
+        let url = NSURL(string: urlAsString)!
+        var req = NSMutableURLRequest(URL: url)
+        
         let action = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Decline") { (action, row) -> Void in
-            if (row.row == 10) {
-                // do some stuff
-            } else {
-                // do other stuff
-            }
+            println("Declining")
+            var bodyData = "\(self.KEY_NAME)=\(self.names[indexPath.row])&\(self.KEY_EVID)=\(self.evIds[indexPath.row])&setVal=0&fbID=\(self.fbID)"
+            req.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+            req.HTTPMethod = "POST"
+            
+            self.names.removeAtIndex(indexPath.row)
+            self.imgLinks.removeAtIndex(indexPath.row)
+            self.time.removeAtIndex(indexPath.row)
+            self.eTypes.removeAtIndex(indexPath.row)
+            self.evIds.removeAtIndex(indexPath.row)
+            
+            tableView.reloadData();
         }
         
         let action2 = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Attend") { (action, row) -> Void in
             //do something for a a given row
+            println("attending")
+            var bodyData = "\(self.KEY_NAME)=\(self.names[indexPath.row])&\(self.KEY_EVID)=\(self.evIds[indexPath.row])&setVal=0&fbID=\(self.fbID)"
+            req.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+            req.HTTPMethod = "POST"
+            
+            self.names.removeAtIndex(indexPath.row)
+            self.imgLinks.removeAtIndex(indexPath.row)
+            self.time.removeAtIndex(indexPath.row)
+            self.eTypes.removeAtIndex(indexPath.row)
+            self.evIds.removeAtIndex(indexPath.row)
+            
+            tableView.reloadData();
         }
+        
+        NSURLConnection.sendAsynchronousRequest(req, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+            println(data)
+        })
+        
+    
         
         return [action, action2]
     }
@@ -83,7 +120,6 @@ class QVInvitationViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             // delete from the model
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         } else if(editingStyle == UITableViewCellEditingStyle.Insert) {
             // do something else here
         }
