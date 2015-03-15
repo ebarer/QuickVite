@@ -466,7 +466,7 @@
                                     <outlet property="eventType" destination="1cr-kw-6ee" id="bKE-yt-79J"/>
                                     <outlet property="hostName" destination="N5M-em-pE2" id="XUH-jQ-tdd"/>
                                     <outlet property="profileImage" destination="Cpo-AL-fVv" id="CZI-qM-acU"/>
-                                    <segue destination="Afm-Rv-tXZ" kind="showDetail" id="GII-mS-CdN"/>
+                                    <segue destination="Afm-Rv-tXZ" kind="show" id="GII-mS-CdN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -683,7 +683,7 @@
         <image name="Settings Icon" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GII-mS-CdN"/>
+        <segue reference="y0v-Pb-xc5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.24705882352941178" green="0.76470588235294112" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
