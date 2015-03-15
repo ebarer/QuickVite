@@ -35,7 +35,7 @@ class QVFacebookViewController: UIViewController, FBLoginViewDelegate {
         self.tabBarController?.tabBar.hidden = true
         if (fbkLoggedIn != false) {
             fbkLoggedIn = false
-            self.tabBarController?.selectedIndex = 3
+            self.tabBarController?.selectedIndex = 2
         }
     }
 }

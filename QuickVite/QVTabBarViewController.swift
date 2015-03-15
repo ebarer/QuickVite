@@ -9,7 +9,7 @@
 import UIKit
 
 struct VQ {
-    static let url = "http://206.12.54.216:5000"
+    static let url = "http://206.12.54.216:8080"
 }
 
 var facebookID = String()
@@ -30,7 +30,7 @@ class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
         } else {
             println("Facebook Session Inactive")
             fbkLoggedIn = false
-            self.selectedIndex = 3
+            self.selectedIndex = 2
         }
         
         fbLoginView.delegate = self

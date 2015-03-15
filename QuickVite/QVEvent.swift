@@ -62,9 +62,10 @@ class QVEvent: NSObject {
         request.HTTPMethod = "POST"
         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(dict, options: nil, error: nil)
         
+        var err: NSError?
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
-            if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as? NSDictionary {
+            if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:&err) as? NSDictionary {
                 // json will parse numbers as integers
                 let id = jsonResult["id"] as NSNumber
                 self.eventID = id.stringValue
@@ -74,7 +75,7 @@ class QVEvent: NSObject {
 
     
     func getAttendees() {
-        let urlAsString = VQ.url + "/quickvite/api/getEventPeople/" + self.eventID
+        let urlAsString = VQ.url + "/quickvite/api/getEventPeople/1"
         let url = NSURL(string: urlAsString)!
         let request = NSMutableURLRequest(URL: url)
         
