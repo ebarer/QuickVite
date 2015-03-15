@@ -105,7 +105,7 @@ class QVInvitationViewController: UITableViewController {
             self.imgLinks.removeAtIndex(indexPath.row)
             self.time.removeAtIndex(indexPath.row)
             self.eTypes.removeAtIndex(indexPath.row)
-            self.evIds.removeAtIndex(indexPath.row)
+//            self.evIds.removeAtIndex(indexPath.row)
             
             tableView.reloadData();
         }
