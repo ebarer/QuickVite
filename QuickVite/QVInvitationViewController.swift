@@ -12,7 +12,7 @@ class QVInvitationViewController: UITableViewController {
     
     var names = [AnyObject]()
     var images = [String]()
-    var
+//    var
     
 
     @IBOutlet var mTableView: UITableView!
@@ -24,7 +24,8 @@ class QVInvitationViewController: UITableViewController {
         let url = NSURL(string: urlAsString)!
         let request = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
-            //            var data = NSString(data: data, encoding: NSUTF8StringEncoding)!
+            
+            
             var data = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as NSDictionary
             if let data = data["people"]! as? [[String:AnyObject]] {
 //                print(data.count)
