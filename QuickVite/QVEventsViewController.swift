@@ -8,16 +8,38 @@
 
 import UIKit
 
-class QVEventsViewController: UITableViewController {
+class QVEventsViewController: UITableViewController, UITableViewDataSource {
     
     var newEvent: QVEvent?
     var invitees = [QVPerson]()
+    var events = [QVEvent]()
     var animationInProgress = false
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    func saveEvents(events: [QVEvent]) {
+        self.events = events
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return events.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("attendeeCell", forIndexPath: indexPath) as UITableViewCell
         
-        var myPerson = QVPerson(firstName: "farzin", lastName: "faghihi")
-        myPerson.getEvents()
+        if let event = events[indexPath.row] as QVEvent? {
+            cell.textLabel?.text = event.type
+        }
+        
+        return cell
     }
     
     override func viewDidAppear(animated: Bool) {
