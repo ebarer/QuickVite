@@ -21,13 +21,7 @@ class QVAddEventFriendsViewController: UITableViewController, UINavigationContro
         let item = friendList[indexPath.row]
         cell.textLabel?.text = item
         
-//        if (item.isCompleted) {
-//            cell.accessoryType = .Checkmark
-//            cell.imageView?.image = item.photo
-//        } else {
-//            cell.accessoryType = .None
-//            cell.imageView?.image = nil
-//        }
+//      cell.accessoryType = .Checkmark
         
         return cell
     }
@@ -37,5 +31,13 @@ class QVAddEventFriendsViewController: UITableViewController, UINavigationContro
 
         // Do any additional setup after loading the view.
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "eventCreateSegue") {
+            dismissViewControllerAnimated(true, completion: nil)
+            
+            var eventVC:QVEventViewController = segue.destinationViewController as QVEventViewController
+        }
+    }
+    
 }

@@ -20,7 +20,7 @@ class QVAddEventViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nextEvent: UIBarButtonItem!
 
-    @IBAction func cancel(sender: AnyObject) {
+    @IBAction func cancel(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
         eventType.resignFirstResponder()
     }
