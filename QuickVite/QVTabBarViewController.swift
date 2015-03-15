@@ -12,10 +12,9 @@ struct VQ {
     static let url = "http://206.12.54.216:8080"
 }
 
-var facebookID = ""
+var facebookID = String()
 var fbkLoggedIn: Bool = false
 var friendList = [String]()
-var facebookID = ""
 
 class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
     
