@@ -21,8 +21,6 @@ class QVInvitationViewController: UITableViewController {
         let url = NSURL(string: urlAsString)!
         let request = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
-            
-
 
             if let data = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary {
                 if let data = data["people"]! as? [[String:AnyObject]] {
@@ -35,8 +33,6 @@ class QVInvitationViewController: UITableViewController {
             }
             
         })
-        
-        
     }
     
     override func viewDidLoad() {
@@ -54,12 +50,12 @@ class QVInvitationViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("QVInvitationViewCell") as QVInvitationTableViewCell
-        
 //        cell.textLabel?.text = self.names[indexPath.row] as String
-        
-        
         return cell
     }
     
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1;
+    }
     
 }

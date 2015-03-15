@@ -10,6 +10,7 @@ import UIKit
 
 class QVEventsViewController: UITableViewController {
     
+    var newEvent: QVEvent?
     var animationInProgress = false
     
     override func viewDidAppear(animated: Bool) {
@@ -21,8 +22,15 @@ class QVEventsViewController: UITableViewController {
     
     @IBAction func unwindToEvent(segue: UIStoryboardSegue) {
         animationInProgress = true
+        let source = segue.sourceViewController as QVAddEventFriendsViewController
+        newEvent = source.newEvent
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "moveToEvent") {
+            let VC:QVEventViewController = segue.destinationViewController as QVEventViewController
+            VC.aEvent = newEvent
+        }
+    }
     
 }
