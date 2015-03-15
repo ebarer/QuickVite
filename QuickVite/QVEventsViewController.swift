@@ -35,8 +35,8 @@ class QVEventsViewController: UITableViewController {
             let VC:QVEventViewController = segue.destinationViewController as QVEventViewController
             if let event = newEvent {
                 VC.aEvent = event
+                VC.aEvent?.postEvent()
             }
         }
     }
-    
 }
