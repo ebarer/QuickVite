@@ -1,5 +1,5 @@
 //
-//  QVEventTableViewController.swift
+//  QVEventsViewController.swift
 //  QuickVite
 //
 //  Created by Elliot Barer on 2015-03-14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QVEventTableViewController: UITableViewController {
+class QVEventsViewController: UITableViewController {
     
     var animationInProgress = false
     
@@ -22,5 +22,7 @@ class QVEventTableViewController: UITableViewController {
     @IBAction func unwindToEvent(segue: UIStoryboardSegue) {
         animationInProgress = true
     }
+    
+    
     
 }
