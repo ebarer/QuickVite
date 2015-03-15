@@ -15,12 +15,16 @@ class QVEventsViewController: UITableViewController, UITableViewDataSource {
     var events = [QVEvent]()
     var animationInProgress = false
     
+    @IBOutlet var eventsList: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        QVPerson.getEvents(self)
     }
     
     func saveEvents(events: [QVEvent]) {
         self.events = events
+        eventsList.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,7 +37,7 @@ class QVEventsViewController: UITableViewController, UITableViewDataSource {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("attendeeCell", forIndexPath: indexPath) as UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("eventListCell", forIndexPath: indexPath) as UITableViewCell
         
         if let event = events[indexPath.row] as QVEvent? {
             cell.textLabel?.text = event.type
@@ -47,6 +51,8 @@ class QVEventsViewController: UITableViewController, UITableViewDataSource {
             performSegueWithIdentifier("moveToEvent", sender: self)
             animationInProgress = false
         }
+        
+        QVPerson.getEvents(self)
     }
     
     @IBAction func unwindToEvent(segue: UIStoryboardSegue) {
@@ -58,13 +64,21 @@ class QVEventsViewController: UITableViewController, UITableViewDataSource {
         }
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        newEvent = events[indexPath.row]
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "moveToEvent") {
             let VC:QVEventViewController = segue.destinationViewController as QVEventViewController
             if let event = newEvent {
                 VC.aEvent = event
-                VC.aEvent?.postEvent()
             }
+        }
+        
+        if (segue.identifier == "eventsToEvent") {
+            let VC:QVEventViewController = segue.destinationViewController as QVEventViewController
+            VC.aEvent = newEvent
         }
     }
 }

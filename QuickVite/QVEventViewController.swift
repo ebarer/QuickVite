@@ -12,7 +12,6 @@ class QVEventViewController: UIViewController, UITableViewDataSource {
     
     var aEvent:QVEvent?
     var attendees = [QVPerson]()
-    var haveAttendees = false
     
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var eventDate: UILabel!
@@ -41,7 +40,7 @@ class QVEventViewController: UIViewController, UITableViewDataSource {
             var dateFormatter = NSDateFormatter()
             dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
             dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-            eventDate.text = dateFormatter.stringFromDate(event.date!)
+            eventDate.text = dateFormatter.stringFromDate(event.date)
             
             eventLocation.text = event.location
             

@@ -397,14 +397,14 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ax-Hb-Cq4">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ax-Hb-Cq4">
                                             <rect key="frame" x="127" y="56" width="100" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="1XI-E4-A8f"/>
                                                 <constraint firstAttribute="width" constant="100" id="4Rv-Tv-Xn9"/>
                                                 <constraint firstAttribute="height" constant="21" id="Rwm-Di-ooQ"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
@@ -488,7 +488,7 @@
         <scene sceneID="Ot3-09-6GN">
             <objects>
                 <navigationController id="mI2-aT-lCh" customClass="QVGeneralViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Invitations" image="Invitations Icon" id="RpQ-DZ-UXd"/>
+                    <tabBarItem key="tabBarItem" title="Invitations" image="Invitations Icon" badgeValue="3" id="RpQ-DZ-UXd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6xg-nx-Dlm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -624,13 +624,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="attendingEventCell" id="NCu-Pu-jdd">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventListCell" id="NCu-Pu-jdd">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NCu-Pu-jdd" id="HFp-kS-yd6">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Afm-Rv-tXZ" kind="show" identifier="" id="Miz-Uu-6Vv"/>
+                                    <segue destination="Afm-Rv-tXZ" kind="show" identifier="eventsToEvent" id="Miz-Uu-6Vv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -647,7 +647,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Afm-Rv-tXZ" kind="show" identifier="moveToEvent" id="CKT-xf-9rM"/>
+                        <outlet property="eventsList" destination="hzW-YF-EpL" id="05y-Ja-0B6"/>
+                        <segue destination="Afm-Rv-tXZ" kind="show" identifier="moveToEvent" id="y0v-Pb-xc5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DV8-aW-A97" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -682,7 +683,7 @@
         <image name="Settings Icon" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Miz-Uu-6Vv"/>
+        <segue reference="GII-mS-CdN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.24705882352941178" green="0.76470588235294112" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
