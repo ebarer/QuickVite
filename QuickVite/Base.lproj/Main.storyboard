@@ -176,7 +176,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Location" id="hmI-8N-Emh"/>
                     <connections>
-                        <outlet property="eventMap" destination="JM3-P5-Utk" id="fPE-fm-HPb"/>
+                        <outlet property="eventMap" destination="JM3-P5-Utk" id="v9q-l9-z1b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqg-ef-WkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -360,6 +360,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Event Details" id="Up1-uy-lpE"/>
                     <connections>
+                        <outlet property="attendeeList" destination="QLR-re-SCv" id="QF5-ku-4HS"/>
                         <outlet property="bgPhoto" destination="fBd-GN-gFS" id="wQM-nS-LJb"/>
                         <outlet property="eventDate" destination="tGN-Tb-h1D" id="qxs-pt-B8V"/>
                         <outlet property="eventLocation" destination="Fbg-e1-bsh" id="gV9-Uz-GPt"/>
