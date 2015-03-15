@@ -12,7 +12,6 @@ struct VQ {
     static let url = "http://206.12.54.216:8080"
 }
 
-var facebookID = String()
 var fbkLoggedIn: Bool = false
 var friendList = [String]()
 let locManager = CLLocationManager()
@@ -49,6 +48,7 @@ class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
     func loginViewFetchedUserInfo(loginView: FBLoginView!, user: FBGraphUser!) {
         let auth_token = FBSession.activeSession().accessTokenData.accessToken
         let userID = user.objectID
+        NSUserDefaults.standardUserDefaults().setObject(userID, forKey: "facebookID");
         
         FBRequestConnection.startWithGraphPath("me/taggable_friends", completionHandler: {(connection, result, error) -> Void in
             if let friends = result["data"] as? [[String:AnyObject]] {
@@ -63,7 +63,6 @@ class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
         })
         
         FBRequestConnection.startWithGraphPath("me", completionHandler: {(connection, result, error) -> Void in
-            facebookID = result.objectID
             var newQVPerson = QVPerson(firstName: result.first_name, lastName: result.last_name)
             newQVPerson.postPerson()
         })

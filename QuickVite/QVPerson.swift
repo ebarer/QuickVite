@@ -39,9 +39,11 @@ class QVPerson: NSObject {
     }
     
     func postPerson() {
+        
+        var facebookID = NSUserDefaults.standardUserDefaults().valueForKey("facebookID") as String;
+        
         let urlAsString = VQ.url + "/quickvite/api/createUser"
         let url = NSURL(string: urlAsString)!
-        
         var dict = ["facebookID": facebookID, "firstName": self.firstName, "lastName": self.lastName]
         
         let request = NSMutableURLRequest(URL: url)
@@ -55,10 +57,13 @@ class QVPerson: NSObject {
     }
     
     func getEvents() {
-        let urlAsString = VQ.url + "/quickvite/api/getEvents" + facebookID
+        
+        var facebookID = NSUserDefaults.standardUserDefaults().valueForKey("facebookID") as String;
+
+        let urlAsString = VQ.url + "/quickvite/api/getEvents/" + facebookID
         let url = NSURL(string: urlAsString)!
         let request = NSMutableURLRequest(URL: url)
-        
+
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.HTTPMethod = "GET"
         
