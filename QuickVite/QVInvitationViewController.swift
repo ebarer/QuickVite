@@ -10,7 +10,7 @@ import UIKit
 
 class QVInvitationViewController: UITableViewController {
     
-    var names = [AnyObject]()
+    var names = [String]()
     var images = [String]()
     
     @IBOutlet var mTableView: UITableView!
@@ -24,15 +24,15 @@ class QVInvitationViewController: UITableViewController {
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             
             
-            var data = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as NSDictionary
-            if let data = data["people"]! as? [[String:AnyObject]] {
-                //                print(data.count)
-                for i in data {
-                    //                    println(i)
-                    self.names.append(i["name"]!)
+            if let data = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? NSDictionary {
+                if let data = data["people"]! as? [[String:AnyObject]] {
+                    for i in data {
+                        self.names.append(i["name"])
+                    }
                 }
+                
+                self.mTableView.reloadData()
             }
-            self.mTableView.reloadData()
             
         })
     }
@@ -53,7 +53,7 @@ class QVInvitationViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("QVInvitationViewCell") as QVInvitationTableViewCell
         
-        //        cell.textLabel?.text = self.names[indexPath.row] as String
+//        cell.textLabel?.text = self.names[indexPath.row] as String
         
         
         return cell
