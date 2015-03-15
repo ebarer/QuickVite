@@ -11,6 +11,7 @@
 		CE0557AC1AB3DB9000FFDCE7 /* QVEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */; };
 		CE0557AF1AB3DB9000FFDCE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0557AD1AB3DB9000FFDCE7 /* Main.storyboard */; };
 		CE0557C01AB3DB9000FFDCE7 /* QuickViteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0557BF1AB3DB9000FFDCE7 /* QuickViteTests.swift */; };
+		CE34543A1AB5ACE100614576 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3454391AB5ACE100614576 /* CoreLocation.framework */; };
 		CE4A6E0D1AB4B9C400344B6E /* QVInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A6E0B1AB4B9C400344B6E /* QVInvitation.swift */; };
 		CE4A6E0E1AB4B9C400344B6E /* QVInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A6E0C1AB4B9C400344B6E /* QVInvitationViewController.swift */; };
 		CE4A6E101AB4BC0C00344B6E /* QVTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A6E0F1AB4BC0C00344B6E /* QVTabBarViewController.swift */; };
@@ -50,6 +51,7 @@
 		CE0557B91AB3DB9000FFDCE7 /* QuickViteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickViteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0557BE1AB3DB9000FFDCE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0557BF1AB3DB9000FFDCE7 /* QuickViteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickViteTests.swift; sourceTree = "<group>"; };
+		CE3454391AB5ACE100614576 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CE4A6E0B1AB4B9C400344B6E /* QVInvitation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVInvitation.swift; sourceTree = "<group>"; };
 		CE4A6E0C1AB4B9C400344B6E /* QVInvitationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVInvitationViewController.swift; sourceTree = "<group>"; };
 		CE4A6E0F1AB4BC0C00344B6E /* QVTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVTabBarViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE34543A1AB5ACE100614576 /* CoreLocation.framework in Frameworks */,
 				CEFD83E71AB5953E00A424EC /* MapKit.framework in Frameworks */,
 				CE5D87531AB47C75009D690B /* FacebookSDK.framework in Frameworks */,
 			);
@@ -94,6 +97,7 @@
 		CE0557991AB3DB9000FFDCE7 = {
 			isa = PBXGroup;
 			children = (
+				CE3454391AB5ACE100614576 /* CoreLocation.framework */,
 				CE0557A41AB3DB9000FFDCE7 /* QuickVite */,
 				CE0557BC1AB3DB9000FFDCE7 /* QuickViteTests */,
 				CE0557A31AB3DB9000FFDCE7 /* Products */,

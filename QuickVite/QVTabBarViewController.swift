@@ -15,6 +15,7 @@ struct VQ {
 var facebookID = String()
 var fbkLoggedIn: Bool = false
 var friendList = [String]()
+let locManager = CLLocationManager()
 
 class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
     
@@ -36,6 +37,8 @@ class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
         fbLoginView.delegate = self
         fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
         fbLoginView.loginBehavior = FBSessionLoginBehavior.UseSystemAccountIfPresent
+        
+        locManager.requestWhenInUseAuthorization()
     }
 
     override func didReceiveMemoryWarning() {

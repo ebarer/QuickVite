@@ -4,8 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
-	<key>NSLocationWhenInUsage</key>
-	<string>This information is required to show your current location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Required for both event locations and car pool functionality.</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
