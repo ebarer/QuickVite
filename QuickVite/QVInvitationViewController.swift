@@ -27,7 +27,7 @@ class QVInvitationViewController: UITableViewController {
             if let data = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary {
                 if let data = data["people"]! as? [[String:AnyObject]] {
                     for i in data {
-                        self.names.append(i["name"] as String)
+//                        self.names.append(i["name"])
                     }
                 }
                 
