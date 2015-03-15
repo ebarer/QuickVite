@@ -39,7 +39,7 @@ class QVPerson: NSObject {
     }
     
     func postPerson() {
-        var facebookID = NSUserDefaults.standardUserDefaults().valueForKey("facebookID") as String;
+        var facebookID = NSUserDefaults.standardUserDefaults().objectForKey("facebookID") as String;
         
         let urlAsString = VQ.url + "/quickvite/api/createUser"
         let url = NSURL(string: urlAsString)!
@@ -56,7 +56,8 @@ class QVPerson: NSObject {
     }
     
     func getEvents() {
-        var facebookID = NSUserDefaults.standardUserDefaults().valueForKey("facebookID") as String;
+        
+        var facebookID = NSUserDefaults.standardUserDefaults().objectForKey("facebookID") as String;
 
         let urlAsString = VQ.url + "/quickvite/api/getEvents/" + facebookID
         let url = NSURL(string: urlAsString)!
