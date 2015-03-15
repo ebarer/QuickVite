@@ -22,6 +22,7 @@ class QVFacebookViewController: UIViewController, FBLoginViewDelegate {
     
     // Figure out how to switch viewcontroller when logging in/out
     func loginViewShowingLoggedInUser(loginView: FBLoginView!) {
+        self.title = "Settings"
         self.tabBarController?.tabBar.hidden = false
         if (fbkLoggedIn != true) {
             fbkLoggedIn = true
@@ -30,6 +31,7 @@ class QVFacebookViewController: UIViewController, FBLoginViewDelegate {
     }
     
     func loginViewShowingLoggedOutUser(loginView: FBLoginView!) {
+        self.title = "QuickVite"
         self.tabBarController?.tabBar.hidden = true
         if (fbkLoggedIn != false) {
             fbkLoggedIn = false
