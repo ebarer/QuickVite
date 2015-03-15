@@ -488,7 +488,7 @@
         <scene sceneID="Ot3-09-6GN">
             <objects>
                 <navigationController id="mI2-aT-lCh" customClass="QVGeneralViewController" customModule="QuickVite" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Invitations" image="Invitations Icon" id="RpQ-DZ-UXd"/>
+                    <tabBarItem key="tabBarItem" title="Invitations" image="Invitations Icon" badgeValue="3" id="RpQ-DZ-UXd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6xg-nx-Dlm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -624,13 +624,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="attendingEventCell" id="NCu-Pu-jdd">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventListCell" id="NCu-Pu-jdd">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NCu-Pu-jdd" id="HFp-kS-yd6">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Afm-Rv-tXZ" kind="show" identifier="" id="Miz-Uu-6Vv"/>
+                                    <segue destination="Afm-Rv-tXZ" kind="show" identifier="eventsToEvent" id="Miz-Uu-6Vv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -647,7 +647,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Afm-Rv-tXZ" kind="show" identifier="moveToEvent" id="CKT-xf-9rM"/>
+                        <outlet property="eventsList" destination="hzW-YF-EpL" id="05y-Ja-0B6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DV8-aW-A97" userLabel="First Responder" sceneMemberID="firstResponder"/>

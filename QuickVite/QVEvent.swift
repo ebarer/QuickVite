@@ -14,21 +14,15 @@ class QVEvent: NSObject {
     var eventID: String
     var ownerID: String
     var type: String
-    var date: NSDate?
-    var location: String?
+    var date: NSDate
+    var location: String
     
-    init(ownerID: String, type: String, date dateParam: NSDate?, location locationParam: String?) {
+    init(ownerID: String, type: String, date dateParam: NSDate, location locationParam: String) {
         self.type = type
         self.ownerID = ownerID
         self.eventID = "0"
-
-        if let newDate = dateParam {
-            self.date = newDate
-        }
-        
-        if let newLocation = locationParam {
-            self.location = newLocation
-        }
+        self.date = dateParam
+        self.location = locationParam
     }
     
     func getEvent() {
@@ -48,14 +42,12 @@ class QVEvent: NSObject {
         
         var dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-DD hh:mm" //format style. Browse online to get a format that fits your needs.
-        var dateString = dateFormatter.stringFromDate(self.date!)
+        var dateString = dateFormatter.stringFromDate(self.date)
         
         var dict = ["ownerID": self.ownerID, "type": self.type, "date": dateString]
         
         //checking if we have a location to had, if not it will crash passing in nil to dictionary
-        if let loc = self.location {
-            dict["location"] = loc
-        }
+        dict["location"] = self.location
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.HTTPMethod = "POST"
@@ -75,7 +67,7 @@ class QVEvent: NSObject {
 
     func getAttendees(controller: QVEventViewController) {
         //fix url to take event ID
-        let urlAsString = VQ.url + "/quickvite/api/getEventPeople/1"
+        let urlAsString = VQ.url + "/quickvite/api/getEventPeople/" + self.eventID
         let url = NSURL(string: urlAsString)!
         let request = NSMutableURLRequest(URL: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
