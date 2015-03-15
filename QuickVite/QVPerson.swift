@@ -54,4 +54,19 @@ class QVPerson: NSObject {
         })
     }
     
+    func getEvents() {
+        let urlAsString = VQ.url + "/quickvite/api/getEvents" + facebookID
+        let url = NSURL(string: urlAsString)!
+        let request = NSMutableURLRequest(URL: url)
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.HTTPMethod = "GET"
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+            if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as? NSDictionary {
+                
+                println(jsonResult);
+            }
+        })
+    }
 }
