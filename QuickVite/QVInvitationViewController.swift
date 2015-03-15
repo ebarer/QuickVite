@@ -10,7 +10,7 @@ import UIKit
 
 class QVInvitationViewController: UITableViewController {
     
-    let KEY_NAME = "name"
+    let KEY_NAME = "title"
     let KEY_TIME = "date"
     let KEY_IMG = "imgLink"
     let KEY_ETYPES = "type"
@@ -51,7 +51,7 @@ class QVInvitationViewController: UITableViewController {
                         self.imgLinks.append(i[self.KEY_IMG]! as String)
                         self.time.append(i[self.KEY_TIME]! as String)
                         self.eTypes.append(i[self.KEY_ETYPES]! as String)
-                        self.evIds.append(i[self.KEY_EVID]! as String)
+//                        self.evIds.append(i[self.KEY_EVID]! as String)
                     }
                     
                     self.mTableView.reloadData()
@@ -81,15 +81,15 @@ class QVInvitationViewController: UITableViewController {
         
         let action = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Decline") { (action, row) -> Void in
             println("Declining")
-            var bodyData = "\(self.KEY_NAME)=\(self.names[indexPath.row])&\(self.KEY_EVID)=\(self.evIds[indexPath.row])&setVal=0&fbID=\(self.fbID)"
-            req.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+//            var bodyData = "\(self.KEY_NAME)=\(self.names[indexPath.row])&\(self.KEY_EVID)=\(self.evIds[indexPath.row])&setVal=0&fbID=\(self.fbID)"
+//            req.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
             req.HTTPMethod = "POST"
             
             self.names.removeAtIndex(indexPath.row)
             self.imgLinks.removeAtIndex(indexPath.row)
             self.time.removeAtIndex(indexPath.row)
             self.eTypes.removeAtIndex(indexPath.row)
-            self.evIds.removeAtIndex(indexPath.row)
+//            self.evIds.removeAtIndex(indexPath.row)
             
             tableView.reloadData();
         }
@@ -97,8 +97,8 @@ class QVInvitationViewController: UITableViewController {
         let action2 = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Attend") { (action, row) -> Void in
             //do something for a a given row
             println("attending")
-            var bodyData = "\(self.KEY_NAME)=\(self.names[indexPath.row])&\(self.KEY_EVID)=\(self.evIds[indexPath.row])&setVal=0&fbID=\(self.fbID)"
-            req.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+//            var bodyData = "\(self.KEY_NAME)=\(self.names[indexPath.row])&\(self.KEY_EVID)=\(self.evIds[indexPath.row])&setVal=0&fbID=\(self.fbID)"
+//            req.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
             req.HTTPMethod = "POST"
             
             self.names.removeAtIndex(indexPath.row)
