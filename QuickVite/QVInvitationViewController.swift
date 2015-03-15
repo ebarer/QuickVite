@@ -17,7 +17,8 @@ class QVInvitationViewController: UITableViewController {
     let KEY_EVENTS = "people"
     let KEY_EVID = "evid"
     
-    let fbID = NSUserDefaults.standardUserDefaults().valueForKey("FacebookID") as String
+//    let fbID = NSUserDefaults.standardUserDefaults().objectForKey("FacebookID") as String
+    let fbID = ""
     
     var names = [String]()
     var imgLinks = [String]()
@@ -83,6 +84,14 @@ class QVInvitationViewController: UITableViewController {
             var bodyData = "\(self.KEY_NAME)=\(self.names[indexPath.row])&\(self.KEY_EVID)=\(self.evIds[indexPath.row])&setVal=0&fbID=\(self.fbID)"
             req.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
             req.HTTPMethod = "POST"
+            
+            self.names.removeAtIndex(indexPath.row)
+            self.imgLinks.removeAtIndex(indexPath.row)
+            self.time.removeAtIndex(indexPath.row)
+            self.eTypes.removeAtIndex(indexPath.row)
+            self.evIds.removeAtIndex(indexPath.row)
+            
+            tableView.reloadData();
         }
         
         let action2 = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Attend") { (action, row) -> Void in
@@ -91,11 +100,21 @@ class QVInvitationViewController: UITableViewController {
             var bodyData = "\(self.KEY_NAME)=\(self.names[indexPath.row])&\(self.KEY_EVID)=\(self.evIds[indexPath.row])&setVal=0&fbID=\(self.fbID)"
             req.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
             req.HTTPMethod = "POST"
+            
+            self.names.removeAtIndex(indexPath.row)
+            self.imgLinks.removeAtIndex(indexPath.row)
+            self.time.removeAtIndex(indexPath.row)
+            self.eTypes.removeAtIndex(indexPath.row)
+            self.evIds.removeAtIndex(indexPath.row)
+            
+            tableView.reloadData();
         }
         
         NSURLConnection.sendAsynchronousRequest(req, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             println(data)
         })
+        
+    
         
         return [action, action2]
     }
