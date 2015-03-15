@@ -404,7 +404,7 @@
                                                 <constraint firstAttribute="width" constant="100" id="4Rv-Tv-Xn9"/>
                                                 <constraint firstAttribute="height" constant="21" id="Rwm-Di-ooQ"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
