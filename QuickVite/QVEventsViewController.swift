@@ -11,6 +11,7 @@ import UIKit
 class QVEventsViewController: UITableViewController {
     
     var newEvent: QVEvent?
+    var invitees = [QVPerson]()
     var animationInProgress = false
     
     override func viewDidLoad() {
@@ -30,6 +31,9 @@ class QVEventsViewController: UITableViewController {
         animationInProgress = true
         let source = segue.sourceViewController as QVAddEventFriendsViewController
         newEvent = source.newEvent
+        for invitee in source.invitees {
+            invitee.postInvitation()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
