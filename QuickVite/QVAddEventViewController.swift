@@ -30,7 +30,6 @@ class QVAddEventViewController: UITableViewController, UITextFieldDelegate {
             newEvent = QVEvent(ownerID: facebookID, type: eventType.text, date: datePicker.date, location: eventLocation.text)
             let VC:QVAddEventFriendsViewController = segue.destinationViewController as QVAddEventFriendsViewController
             VC.newEvent = newEvent
-            VC.newEvent?.postEvent()
         }
     }
     

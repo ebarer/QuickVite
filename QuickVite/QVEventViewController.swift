@@ -16,7 +16,7 @@ class QVEventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        println(aEvent?.type)
+        //println(aEvent?.type)
     }
 
     override func didReceiveMemoryWarning() {

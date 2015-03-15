@@ -30,6 +30,7 @@ class QVEventsViewController: UITableViewController {
         if (segue.identifier == "moveToEvent") {
             let VC:QVEventViewController = segue.destinationViewController as QVEventViewController
             VC.aEvent = newEvent
+            VC.aEvent?.postEvent()
         }
     }
     
