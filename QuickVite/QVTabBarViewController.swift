@@ -30,7 +30,7 @@ class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
         } else {
             println("Facebook Session Inactive")
             fbkLoggedIn = false
-            self.selectedIndex = 3
+            self.selectedIndex = 2
         }
         
         fbLoginView.delegate = self

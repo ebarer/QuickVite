@@ -23,6 +23,7 @@
 		CE8A63C41AB42C8400AE3BEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8A63C31AB42C8400AE3BEC /* Images.xcassets */; };
 		CE8A63C71AB42E5C00AE3BEC /* QVCarpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A63C51AB42E5C00AE3BEC /* QVCarpool.swift */; };
 		CE8A63C81AB42E5C00AE3BEC /* QVPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A63C61AB42E5C00AE3BEC /* QVPerson.swift */; };
+		CEC8B4201AB58E6200F83E70 /* QVLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8B41F1AB58E6200F83E70 /* QVLocationViewController.swift */; };
 		CED5C5921AB498E000B95FF6 /* QVAddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5C5911AB498E000B95FF6 /* QVAddEventViewController.swift */; };
 		CED5C5941AB498F300B95FF6 /* QVAddEventFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5C5931AB498F300B95FF6 /* QVAddEventFriendsViewController.swift */; };
 		CEDC83D51AB3FE3E007D5A5D /* QVEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */; };
@@ -61,6 +62,7 @@
 		CE8A63C31AB42C8400AE3BEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		CE8A63C51AB42E5C00AE3BEC /* QVCarpool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVCarpool.swift; sourceTree = "<group>"; };
 		CE8A63C61AB42E5C00AE3BEC /* QVPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVPerson.swift; sourceTree = "<group>"; };
+		CEC8B41F1AB58E6200F83E70 /* QVLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVLocationViewController.swift; sourceTree = "<group>"; };
 		CED5C5911AB498E000B95FF6 /* QVAddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVAddEventViewController.swift; sourceTree = "<group>"; };
 		CED5C5931AB498F300B95FF6 /* QVAddEventFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVAddEventFriendsViewController.swift; sourceTree = "<group>"; };
 		CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVEvent.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				CEFA53C31AB4E2E2008A8823 /* QVFriendsNearbyViewController.swift */,
 				CEDCC6831AB4430C00C8FA87 /* QVGeneralViewController.swift */,
 				CE4A6E0C1AB4B9C400344B6E /* QVInvitationViewController.swift */,
+				CEC8B41F1AB58E6200F83E70 /* QVLocationViewController.swift */,
 				CE4A6E111AB4BE7F00344B6E /* QVSettingsViewController.swift */,
 				CE4A6E0F1AB4BC0C00344B6E /* QVTabBarViewController.swift */,
 			);
@@ -287,6 +290,7 @@
 				CE4A6E0D1AB4B9C400344B6E /* QVInvitation.swift in Sources */,
 				CE5D87561AB47CA6009D690B /* QVFacebookViewController.swift in Sources */,
 				CE77E0221AB527B9009B0091 /* QVInvitationTableViewCell.swift in Sources */,
+				CEC8B4201AB58E6200F83E70 /* QVLocationViewController.swift in Sources */,
 				CED5C5921AB498E000B95FF6 /* QVAddEventViewController.swift in Sources */,
 				CE0557AC1AB3DB9000FFDCE7 /* QVEventViewController.swift in Sources */,
 				CE77E0241AB535AD009B0091 /* QVEventsViewController.swift in Sources */,
