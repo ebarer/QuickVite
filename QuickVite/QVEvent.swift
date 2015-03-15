@@ -74,7 +74,7 @@ class QVEvent: NSObject {
 
     
     func getAttendees() {
-        let urlAsString = VQ.url + "/quickvite/api/getEventPeople/" + "1"
+        let urlAsString = VQ.url + "/quickvite/api/getEventPeople/" + self.eventID
         let url = NSURL(string: urlAsString)!
         let request = NSMutableURLRequest(URL: url)
         
