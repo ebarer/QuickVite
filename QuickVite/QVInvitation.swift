@@ -11,13 +11,15 @@ import UIKit
 class QVInvitation {
     
     var userImage:UIImage,
-    userName:String,
+    firstName:String,
+    lastName:String,
     type:String,
     when:String
     
-    init(userImage:UIImage, userName:String, type:String, when:String) {
+    init(userImage:UIImage, firstName:String, lastName:String, type:String, when:String) {
         self.userImage = userImage
-        self.userName = userName
+        self.firstName = firstName
+        self.lastName = lastName
         self.type = type
         self.when = when
     }
@@ -37,6 +39,19 @@ class QVInvitation {
             }
         })
         
+    }
+    
+    func postInvitation() {
+        let urlAsString = VQ.url + "/quickvite/api/createInvitations"
+        let url = NSURL(string: urlAsString)!
+        var dict = ["firstName": self.firstName, "lastName": self.lastName, "type": self.type, "when": self.when]
+        
+        let request = NSMutableURLRequest(URL: url)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.HTTPMethod = "POST"
+        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(dict, options: nil, error: nil)
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in })
     }
     
 }
