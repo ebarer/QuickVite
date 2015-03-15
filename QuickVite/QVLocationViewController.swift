@@ -8,22 +8,28 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class QVLocationViewController: UIViewController, MKMapViewDelegate {
-
+class QVLocationViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    
+    var locationManager = CLLocationManager()
+    
     @IBOutlet weak var eventMap: MKMapView!
     
     override func viewDidLoad() {
+        
+        locationManager.requestWhenInUseAuthorization()
         eventMap.showsUserLocation = true
-        
-//        let lat = CLLocationDistance(30)
-//        let lon = CLLocationDistance(30)
-//
-//        let startCoordinate = CLLocationCoordinate2D(latitude: <#CLLocationDegrees#>, longitude: <#CLLocationDegrees#>)
-//        let coordinateSpan = MKCoordinateRegionMakeWithDistance(startCoordinate, lat, lon)
-//        
-//        let startRegion = MKCoordinateRegion(center: startCoordinate, span: startCoordinateSpan)
-//        eventMap.setRegion(startRegion, animated: true)
-        
+    }
+    
+    func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
+        let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800)
+        eventMap.setRegion(region, animated: true)
+    }
+    
+    func locationManager(_manager: CLLocationManager!,didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == CLAuthorizationStatus.AuthorizedWhenInUse {
+
+        }
     }
 }

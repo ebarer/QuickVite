@@ -15,6 +15,8 @@ class QVEventsViewController: UITableViewController {
     
     override func viewDidLoad() {
         
+        var myPerson = QVPerson(firstName: "farzin", lastName: "faghihi")
+        myPerson.getEvents()
     }
     
     override func viewDidAppear(animated: Bool) {
