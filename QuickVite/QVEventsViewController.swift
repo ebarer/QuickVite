@@ -13,6 +13,10 @@ class QVEventsViewController: UITableViewController {
     var newEvent: QVEvent?
     var animationInProgress = false
     
+    override func viewDidLoad() {
+        
+    }
+    
     override func viewDidAppear(animated: Bool) {
         if animationInProgress {
             performSegueWithIdentifier("moveToEvent", sender: self)
@@ -29,7 +33,9 @@ class QVEventsViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "moveToEvent") {
             let VC:QVEventViewController = segue.destinationViewController as QVEventViewController
-            VC.aEvent = newEvent
+            if let event = newEvent {
+                VC.aEvent = event
+            }
         }
     }
     
