@@ -43,7 +43,7 @@ class QVEventViewController: UIViewController, UITableViewDataSource {
             
             eventLocation.text = event.location
             
-    //        attendees = aEvent.getAttendees()
+            event.getAttendees(self)
         }
     }
 
