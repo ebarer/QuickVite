@@ -10,13 +10,15 @@ import UIKit
 
 class QVEventViewController: UIViewController, UITableViewDataSource {
     
+    var aEvent:QVEvent?
     var attendees:[QVPerson]?
-    var aEvent: QVEvent?
+    var haveAttendees = false
     
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var eventLocation: UILabel!
     @IBOutlet weak var bgPhoto: UIImageView!
+    @IBOutlet weak var attendeeList: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +45,13 @@ class QVEventViewController: UIViewController, UITableViewDataSource {
             
             eventLocation.text = event.location
             
-    //        attendees = aEvent.getAttendees()
+            event.getAttendees(self)
         }
+    }
+    
+    func saveAttendees(persons: [QVPerson]) {
+        attendees = persons
+        attendeeList.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,15 +62,20 @@ class QVEventViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let ppl = attendees {
             return ppl.count
-        } else {
-            return 10
         }
+        
+        return 0
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("attendeeCell", forIndexPath: indexPath) as UITableViewCell
-//        cell.textLabel?.text = "\(attendees[indexPath.row].firstName) \(attendees[indexPath.row].lastName)"
-        cell.textLabel?.text = "Attendee"
+        
+        if let people = attendees {
+            if let person = people[indexPath.row] as QVPerson? {
+                cell.textLabel?.text = person.firstName + " " + person.lastName
+            }
+        }
+        
         return cell
     }
 }

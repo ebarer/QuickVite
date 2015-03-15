@@ -28,7 +28,7 @@
 		CED5C5941AB498F300B95FF6 /* QVAddEventFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5C5931AB498F300B95FF6 /* QVAddEventFriendsViewController.swift */; };
 		CEDC83D51AB3FE3E007D5A5D /* QVEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */; };
 		CEDCC6841AB4430C00C8FA87 /* QVGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCC6831AB4430C00C8FA87 /* QVGeneralViewController.swift */; };
-		CEFA53C41AB4E2E2008A8823 /* QVFriendsNearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA53C31AB4E2E2008A8823 /* QVFriendsNearbyViewController.swift */; };
+		CEFD83E71AB5953E00A424EC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFD83E61AB5953E00A424EC /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,7 @@
 		CED5C5931AB498F300B95FF6 /* QVAddEventFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVAddEventFriendsViewController.swift; sourceTree = "<group>"; };
 		CEDC83D41AB3FE3E007D5A5D /* QVEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVEvent.swift; sourceTree = "<group>"; };
 		CEDCC6831AB4430C00C8FA87 /* QVGeneralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVGeneralViewController.swift; sourceTree = "<group>"; };
-		CEFA53C31AB4E2E2008A8823 /* QVFriendsNearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVFriendsNearbyViewController.swift; sourceTree = "<group>"; };
+		CEFD83E61AB5953E00A424EC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEFD83E71AB5953E00A424EC /* MapKit.framework in Frameworks */,
 				CE5D87531AB47C75009D690B /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +97,7 @@
 				CE0557A41AB3DB9000FFDCE7 /* QuickVite */,
 				CE0557BC1AB3DB9000FFDCE7 /* QuickViteTests */,
 				CE0557A31AB3DB9000FFDCE7 /* Products */,
+				CEFD83E61AB5953E00A424EC /* MapKit.framework */,
 				CE5D87521AB47C75009D690B /* FacebookSDK.framework */,
 			);
 			sourceTree = "<group>";
@@ -168,7 +170,6 @@
 				CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */,
 				CE77E0231AB535AD009B0091 /* QVEventsViewController.swift */,
 				CE5D87551AB47CA6009D690B /* QVFacebookViewController.swift */,
-				CEFA53C31AB4E2E2008A8823 /* QVFriendsNearbyViewController.swift */,
 				CEDCC6831AB4430C00C8FA87 /* QVGeneralViewController.swift */,
 				CE4A6E0C1AB4B9C400344B6E /* QVInvitationViewController.swift */,
 				CEC8B41F1AB58E6200F83E70 /* QVLocationViewController.swift */,
@@ -236,6 +237,11 @@
 					CE0557A11AB3DB9000FFDCE7 = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = 5ZJB9DN7AQ;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					CE0557B81AB3DB9000FFDCE7 = {
 						CreatedOnToolsVersion = 6.3;
@@ -301,7 +307,6 @@
 				CE0557A81AB3DB9000FFDCE7 /* AppDelegate.swift in Sources */,
 				CE4A6E101AB4BC0C00344B6E /* QVTabBarViewController.swift in Sources */,
 				CE8A63C81AB42E5C00AE3BEC /* QVPerson.swift in Sources */,
-				CEFA53C41AB4E2E2008A8823 /* QVFriendsNearbyViewController.swift in Sources */,
 				CE4A6E0E1AB4B9C400344B6E /* QVInvitationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

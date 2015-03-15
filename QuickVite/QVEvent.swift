@@ -39,7 +39,6 @@ class QVEvent: NSObject {
             var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error: nil) as NSDictionary
 
         })
-        
     }
     
     func postEvent() {
@@ -64,6 +63,7 @@ class QVEvent: NSObject {
         
         var err: NSError?
         
+        // @Farzin: Need to handle optional return
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:&err) as? NSDictionary {
                 // json will parse numbers as integers
@@ -73,20 +73,24 @@ class QVEvent: NSObject {
         })
     }
 
-    
-    func getAttendees() {
+    func getAttendees(controller: QVEventViewController) {
+        //fix url to take event ID
         let urlAsString = VQ.url + "/quickvite/api/getEventPeople/1"
         let url = NSURL(string: urlAsString)!
         let request = NSMutableURLRequest(URL: url)
-        
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.HTTPMethod = "GET"
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as? NSDictionary {
-                
+                var QVPersons = [QVPerson]()
+                var persons = jsonResult["persons"] as [NSDictionary]
+                for person: NSDictionary in persons {
+                    var newQVPerson = QVPerson(firstName: person["firstName"] as String, lastName: person["lastName"] as String)
+                    QVPersons.append(newQVPerson)
+                }
+                controller.saveAttendees(QVPersons);
             }
         })
     }
-
 }
