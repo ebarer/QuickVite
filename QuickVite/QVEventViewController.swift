@@ -66,5 +66,9 @@ class QVEventViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = "Attendee"
         return cell
     }
+    
+    func saveAttendees(persons: [QVPerson]) {
+        println(persons[0].firstName);
+    }
 }
 
