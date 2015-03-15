@@ -15,18 +15,9 @@ class QVFriendsNearbyViewController: UITableViewController, UINavigationControll
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("nearbyFriendCell", forIndexPath: indexPath) as UITableViewCell
         let item = friendList[indexPath.row]
         cell.textLabel?.text = item
-        
-        //        if (item.isCompleted) {
-        //            cell.accessoryType = .Checkmark
-        //            cell.imageView?.image = item.photo
-        //        } else {
-        //            cell.accessoryType = .None
-        //            cell.imageView?.image = nil
-        //        }
-        
         return cell
     }
     

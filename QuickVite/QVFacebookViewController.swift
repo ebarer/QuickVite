@@ -8,10 +8,8 @@
 
 import UIKit
 
-var friendList = [String]()
-
 class QVFacebookViewController: UIViewController, FBLoginViewDelegate {
-    
+
     @IBOutlet var fbLoginView: FBLoginView!
     
     override func viewDidLoad() {
@@ -37,22 +35,5 @@ class QVFacebookViewController: UIViewController, FBLoginViewDelegate {
             fbkLoggedIn = false
             self.tabBarController?.selectedIndex = 3
         }
-    }
-    
-    func loginViewFetchedUserInfo(loginView: FBLoginView!, user: FBGraphUser!) {
-        let auth_token = FBSession.activeSession().accessTokenData.accessToken
-        let userID = user.objectID
-        
-        FBRequestConnection.startWithGraphPath("me/taggable_friends", completionHandler: {(connection, result, error) -> Void in
-            if let friends = result["data"] as? [[String:AnyObject]] {
-                for friend in friends {
-                    let name = friend["name"] as String
-                    friendList.append(name)
-                }
-                
-                var descriptor: NSSortDescriptor = NSSortDescriptor(key: "name", ascending: true, selector: "localizedStandardCompare:")
-                friendList = friendList.sorted{$0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedAscending}
-            }
-        })
     }
 }
