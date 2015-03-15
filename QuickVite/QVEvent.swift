@@ -40,7 +40,7 @@ class QVEvent: NSObject {
     }
     
     func postEvent() {
-        let urlAsString = VQ.url + "/getNames"
+        let urlAsString = VQ.url + "/quickvite/api/createEvent"
         let url = NSURL(string: urlAsString)!
         let request = NSMutableURLRequest(URL: url)
         
@@ -54,7 +54,6 @@ class QVEvent: NSObject {
         if let loc = self.location {
             dict["location"] = loc
         }
-
         
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.HTTPMethod = "POST"

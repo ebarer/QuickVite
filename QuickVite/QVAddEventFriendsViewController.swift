@@ -34,11 +34,10 @@ class QVAddEventFriendsViewController: UITableViewController, UINavigationContro
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "eventCreateSegue") {
+            self.newEvent?.postEvent()
             dismissViewControllerAnimated(true, completion: nil)
-            
+
             var eventVC:QVEventViewController = segue.destinationViewController as QVEventViewController
-            
-            newEvent?.postEvent()
         }
     }
     
