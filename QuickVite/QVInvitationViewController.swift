@@ -23,7 +23,6 @@ class QVInvitationViewController: UITableViewController {
         let request = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             
-            
             var data = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as NSDictionary
             if let data = data["people"]! as? [[String:AnyObject]] {
                 //                print(data.count)

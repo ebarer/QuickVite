@@ -20,24 +20,23 @@ class QVAddEventFriendsViewController: UITableViewController, UINavigationContro
         let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as UITableViewCell
         let item = friendList[indexPath.row]
         cell.textLabel?.text = item
-        
-//      cell.accessoryType = .Checkmark
+        cell.accessoryType = .None
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        cell?.accessoryType = .Checkmark
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "eventCreateSegue") {
-            dismissViewControllerAnimated(true, completion: nil)
-            
-            var eventVC:QVEventViewController = segue.destinationViewController as QVEventViewController
-        }
+    @IBAction func doneEventCreation(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
 }
