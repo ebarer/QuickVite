@@ -18,6 +18,7 @@
 		CE5D87531AB47C75009D690B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5D87521AB47C75009D690B /* FacebookSDK.framework */; };
 		CE5D87541AB47C79009D690B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5D87521AB47C75009D690B /* FacebookSDK.framework */; };
 		CE5D87561AB47CA6009D690B /* QVFacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5D87551AB47CA6009D690B /* QVFacebookViewController.swift */; };
+		CE77E0221AB527B9009B0091 /* QVInvitationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77E0211AB527B9009B0091 /* QVInvitationTableViewCell.swift */; };
 		CE8A63C41AB42C8400AE3BEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8A63C31AB42C8400AE3BEC /* Images.xcassets */; };
 		CE8A63C71AB42E5C00AE3BEC /* QVCarpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A63C51AB42E5C00AE3BEC /* QVCarpool.swift */; };
 		CE8A63C81AB42E5C00AE3BEC /* QVPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A63C61AB42E5C00AE3BEC /* QVPerson.swift */; };
@@ -54,6 +55,7 @@
 		CE5D87521AB47C75009D690B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		CE5D87551AB47CA6009D690B /* QVFacebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVFacebookViewController.swift; sourceTree = "<group>"; };
 		CE5D87571AB47D51009D690B /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		CE77E0211AB527B9009B0091 /* QVInvitationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVInvitationTableViewCell.swift; sourceTree = "<group>"; };
 		CE8A63C31AB42C8400AE3BEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		CE8A63C51AB42E5C00AE3BEC /* QVCarpool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVCarpool.swift; sourceTree = "<group>"; };
 		CE8A63C61AB42E5C00AE3BEC /* QVPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QVPerson.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				CE0557AD1AB3DB9000FFDCE7 /* Main.storyboard */,
+				CE77E0211AB527B9009B0091 /* QVInvitationTableViewCell.swift */,
 			);
 			name = NIBs;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				CEDCC6841AB4430C00C8FA87 /* QVGeneralViewController.swift in Sources */,
 				CE4A6E0D1AB4B9C400344B6E /* QVInvitation.swift in Sources */,
 				CE5D87561AB47CA6009D690B /* QVFacebookViewController.swift in Sources */,
+				CE77E0221AB527B9009B0091 /* QVInvitationTableViewCell.swift in Sources */,
 				CED5C5921AB498E000B95FF6 /* QVAddEventViewController.swift in Sources */,
 				CE0557AC1AB3DB9000FFDCE7 /* QVEventViewController.swift in Sources */,
 				CED5C5941AB498F300B95FF6 /* QVAddEventFriendsViewController.swift in Sources */,
