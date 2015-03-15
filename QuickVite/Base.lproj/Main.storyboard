@@ -683,7 +683,7 @@
         <image name="Settings Icon" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="y0v-Pb-xc5"/>
+        <segue reference="GII-mS-CdN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.24705882352941178" green="0.76470588235294112" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

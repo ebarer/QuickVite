@@ -27,36 +27,53 @@ class QVInvitationViewController: UITableViewController {
     var evIds = [String]()
     
     
+    
     @IBOutlet var mTableView: UITableView!
     
     //async call for getting event invitations
     func getInvitations() {
         
-        let urlAsString = VQ.url + "/invitations"
-        let url = NSURL(string: urlAsString)!
-        let request = NSURLRequest(URL: url)
+//        let urlAsString = VQ.url + "/invitations"
+//        let url = NSURL(string: urlAsString)!
+//        let request = NSURLRequest(URL: url)
+//        
+//        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+//
+//            if error == nil && data != nil {
+//                //
+//                if let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary {
+//                    
+//                    var dataArr: [NSDictionary] = jsonData[self.KEY_EVENTS] as [NSDictionary]
+//                    
+//                    for i in dataArr {
+//                        self.names.append(i[self.KEY_NAME]! as String)
+//                        self.imgLinks.append(i[self.KEY_IMG]! as String)
+//                        self.time.append(i[self.KEY_TIME]! as String)
+//                        self.eTypes.append(i[self.KEY_ETYPES]! as String)
+////                        self.evIds.append(i[self.KEY_EVID]! as String)
+//                    }
+//                    
+//                    self.mTableView.reloadData()
+//                }
+//            }
+//            
+//        })
         
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+        self.names.append("Dinner")
+        self.eTypes.append("event")
+        self.imgLinks.append("http://happynewyeargreeting2015.com/wp-content/uploads/2015/02/valentine-dinner-ideas.jpg")
+        self.time.append("March 13th 2015")
+        
+        self.names.append("Movie")
+        self.eTypes.append("event")
+        self.imgLinks.append("http://vignette1.wikia.nocookie.net/angrybirdsfanon/images/b/b2/Movie.jpg/revision/latest?cb=20130804215834")
+        self.time.append("March 14th 2015")
+        
+        self.names.append("Dinner")
+        self.eTypes.append("Mini Golfing")
+        self.imgLinks.append("https://empathicguidance.files.wordpress.com/2010/12/large_mini-golf.jpg")
+        self.time.append("March 15th 2015")
 
-            if error == nil && data != nil {
-                //
-                if let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary {
-                    
-                    var dataArr: [NSDictionary] = jsonData[self.KEY_EVENTS] as [NSDictionary]
-                    
-                    for i in dataArr {
-                        self.names.append(i[self.KEY_NAME]! as String)
-                        self.imgLinks.append(i[self.KEY_IMG]! as String)
-                        self.time.append(i[self.KEY_TIME]! as String)
-                        self.eTypes.append(i[self.KEY_ETYPES]! as String)
-//                        self.evIds.append(i[self.KEY_EVID]! as String)
-                    }
-                    
-                    self.mTableView.reloadData()
-                }
-            }
-            
-        })
     }
     
     override func viewDidLoad() {
@@ -127,7 +144,7 @@ class QVInvitationViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("QVInvitationViewCell") as QVInvitationTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("invitationCell") as QVInvitationTableViewCell
         cell.hostName?.text = self.names[indexPath.row] as String
         cell.eventDate?.text = self.time[indexPath.row] as String
         cell.eventType?.text = self.eTypes[indexPath.row] as String        
