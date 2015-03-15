@@ -10,14 +10,13 @@ import UIKit
 
 class QVInvitationViewController: UITableViewController {
     
-    var names = [AnyObject]()
+    var names = [String]()
     var images = [String]()
     
     @IBOutlet var mTableView: UITableView!
     
     //async call for getting event invitations
     func getInvitations() {
-        println("claeed get invitations")
         let urlAsString = VQ.url + "/invitations"
         let url = NSURL(string: urlAsString)!
         let request = NSURLRequest(URL: url)
@@ -30,10 +29,13 @@ class QVInvitationViewController: UITableViewController {
                     //                    println(i)
                     self.names.append(i["name"]!)
                 }
+                
+                self.mTableView.reloadData()
             }
-            self.mTableView.reloadData()
             
         })
+        
+        
     }
     
     override func viewDidLoad() {
@@ -52,14 +54,11 @@ class QVInvitationViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("QVInvitationViewCell") as QVInvitationTableViewCell
         
-        //        cell.textLabel?.text = self.names[indexPath.row] as String
+//        cell.textLabel?.text = self.names[indexPath.row] as String
         
         
         return cell
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1;
-    }
     
 }

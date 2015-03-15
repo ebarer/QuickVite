@@ -160,6 +160,7 @@
 		CE8A63CA1AB42E7500AE3BEC /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE77E0211AB527B9009B0091 /* QVInvitationTableViewCell.swift */,
 				CED5C5931AB498F300B95FF6 /* QVAddEventFriendsViewController.swift */,
 				CED5C5911AB498E000B95FF6 /* QVAddEventViewController.swift */,
 				CE0557AB1AB3DB9000FFDCE7 /* QVEventViewController.swift */,
@@ -178,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				CE0557AD1AB3DB9000FFDCE7 /* Main.storyboard */,
-				CE77E0211AB527B9009B0091 /* QVInvitationTableViewCell.swift */,
 			);
 			name = NIBs;
 			sourceTree = "<group>";
