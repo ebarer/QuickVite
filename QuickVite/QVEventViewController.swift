@@ -43,7 +43,7 @@ class QVEventViewController: UIViewController, UITableViewDataSource {
             
             eventLocation.text = event.location
             
-    //        attendees = aEvent.getAttendees()
+            aEvent?.getAttendees(self)
         }
     }
 
@@ -65,6 +65,10 @@ class QVEventViewController: UIViewController, UITableViewDataSource {
 //        cell.textLabel?.text = "\(attendees[indexPath.row].firstName) \(attendees[indexPath.row].lastName)"
         cell.textLabel?.text = "Attendee"
         return cell
+    }
+    
+    func saveAttendees(persons: [QVPerson]) {
+        println(persons[0].firstName);
     }
 }
 
