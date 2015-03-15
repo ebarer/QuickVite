@@ -27,7 +27,7 @@ class QVAddEventViewController: UITableViewController, UITextFieldDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "addEventNext") {
-            newEvent = QVEvent(type: eventType.text, date: datePicker.date, location: eventLocation.text)
+            newEvent = QVEvent(ownerID: facebookID, type: eventType.text, date: datePicker.date, location: eventLocation.text)
             let VC:QVAddEventFriendsViewController = segue.destinationViewController as QVAddEventFriendsViewController
             VC.newEvent = newEvent
         }

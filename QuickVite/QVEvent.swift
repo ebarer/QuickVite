@@ -10,13 +10,15 @@ import Foundation
 
 class QVEvent: NSObject {
     
+    var ownerID: String
     var type: String
     var date: NSDate?
     var location: String?
     
-    init(type: String, date dateParam: NSDate?, location locationParam: String?) {
+    init(ownerID: String, type: String, date dateParam: NSDate?, location locationParam: String?) {
         self.type = type
-        
+        self.ownerID = ownerID
+
         if let newDate = dateParam {
             self.date = newDate
         }
@@ -46,7 +48,7 @@ class QVEvent: NSObject {
         dateFormatter.dateFormat = "YYYY-MM-DD hh:mm" //format style. Browse online to get a format that fits your needs.
         var dateString = dateFormatter.stringFromDate(self.date!)
         
-        var dict = ["type": self.type, "date": dateString]
+        var dict = ["ownerID": self.ownerID, "type": self.type, "date": dateString]
         
         //checking if we have a location to had, if not it will crash passing in nil to dictionary
         if let loc = self.location {

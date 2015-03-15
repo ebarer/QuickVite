@@ -37,6 +37,8 @@ class QVAddEventFriendsViewController: UITableViewController, UINavigationContro
             dismissViewControllerAnimated(true, completion: nil)
             
             var eventVC:QVEventViewController = segue.destinationViewController as QVEventViewController
+            
+            newEvent?.postEvent()
         }
     }
     
