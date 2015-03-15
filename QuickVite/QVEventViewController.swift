@@ -10,32 +10,18 @@ import UIKit
 
 class QVEventViewController: UIViewController {
 
+    @IBOutlet weak var testText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
-        var myArr = ["Farzin Faghihi"]
-        var myQVPerson = QVPerson(firstName: "farzin", lastName: "faghihi")
-        myQVPerson.postPerson(myArr)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-//    @IBAction func commitEvent(segue: UIStoryboardSegue){
-//        if segue.identifier == "DoneItem"{
-//            let addEventVC = segue.sourceViewController as! QVAddEventViewController
-//            
-//            if let newItem = addEventVC.newItem {
-//                myManager.items += [newItem]
-//                myManager.save()
-//                let indexPath = NSIndexPath(forRow: myManager.items.count - 1, inSection: 0)
-//                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-//            }
-//        }
-//    }
 
 
 }
