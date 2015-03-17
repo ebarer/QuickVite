@@ -63,7 +63,7 @@ class QVEventViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("attendeeCell", forIndexPath: indexPath) as UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("attendeeCell", forIndexPath: indexPath) as! UITableViewCell
         
         if let person = attendees[indexPath.row] as QVPerson? {
             cell.textLabel?.text = person.firstName + " " + person.lastName

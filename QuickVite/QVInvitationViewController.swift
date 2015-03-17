@@ -144,7 +144,7 @@ class QVInvitationViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("invitationCell") as QVInvitationTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("invitationCell") as! QVInvitationTableViewCell
         cell.hostName?.text = self.names[indexPath.row] as String
         cell.eventDate?.text = self.time[indexPath.row] as String
         cell.eventType?.text = self.eTypes[indexPath.row] as String        
