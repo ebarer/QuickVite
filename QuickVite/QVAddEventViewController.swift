@@ -26,11 +26,11 @@ class QVAddEventViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var facebookID = NSUserDefaults.standardUserDefaults().objectForKey("facebookID") as String;
+        var facebookID = NSUserDefaults.standardUserDefaults().objectForKey("facebookID") as! String;
         
         if (segue.identifier == "addEventNext") {
             newEvent = QVEvent(ownerID: facebookID, type: eventType.text, date: datePicker.date, location: eventLocation.text!)
-            let VC:QVAddEventFriendsViewController = segue.destinationViewController as QVAddEventFriendsViewController
+            let VC:QVAddEventFriendsViewController = segue.destinationViewController as! QVAddEventFriendsViewController
             VC.newEvent = newEvent
             VC.newEvent?.postEvent()
         }

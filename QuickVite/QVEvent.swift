@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Elliot Barer. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class QVEvent: NSObject {
     
@@ -30,7 +30,7 @@ class QVEvent: NSObject {
         let url = NSURL(string: urlAsString)!
         let request = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
-            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error: nil) as NSDictionary
+            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error: nil) as! NSDictionary
 
         })
     }
@@ -59,7 +59,7 @@ class QVEvent: NSObject {
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:&err) as? NSDictionary {
                 // json will parse numbers as integers
-                let id = jsonResult["id"] as NSNumber
+                let id = jsonResult["id"] as! NSNumber
                 self.eventID = id.stringValue
             }
         })
@@ -76,9 +76,9 @@ class QVEvent: NSObject {
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as? NSDictionary {
                 var QVPersons = [QVPerson]()
-                var persons = jsonResult["persons"] as [NSDictionary]
+                var persons = jsonResult["persons"] as! [NSDictionary]
                 for person: NSDictionary in persons {
-                    var newQVPerson = QVPerson(firstName: person["firstName"] as String, lastName: person["lastName"] as String)
+                    var newQVPerson = QVPerson(firstName: person["firstName"] as! String, lastName: person["lastName"] as! String)
                     QVPersons.append(newQVPerson)
                 }
                 controller.saveAttendees(QVPersons);

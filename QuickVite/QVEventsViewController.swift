@@ -19,31 +19,7 @@ class QVEventsViewController: UITableViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        QVPerson.getEvents(self)
-    }
-    
-    func saveEvents(events: [QVEvent]) {
-        self.events = events
-        eventsList.reloadData()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("eventListCell", forIndexPath: indexPath) as UITableViewCell
-        
-        if let event = events[indexPath.row] as QVEvent? {
-            cell.textLabel?.text = event.type
-        }
-        
-        return cell
+//        QVPerson.getEvents(self)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -52,32 +28,62 @@ class QVEventsViewController: UITableViewController, UITableViewDataSource {
             animationInProgress = false
         }
         
-        QVPerson.getEvents(self)
+        //        QVPerson.getEvents(self)
     }
     
-    @IBAction func unwindToEvent(segue: UIStoryboardSegue) {
-        animationInProgress = true
-        let source = segue.sourceViewController as QVAddEventFriendsViewController
-        newEvent = source.newEvent
-        for invitee in source.invitees {
-            invitee.postInvitation()
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
+    // Model helper
+    func saveEvents(events: [QVEvent]) {
+        self.events = events
+        eventsList.reloadData()
+    }
+    
+    
+    // Table Modification
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return events.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("eventListCell", forIndexPath: indexPath) as! UITableViewCell
+        
+        if let event = events[indexPath.row] as QVEvent? {
+            cell.textLabel?.text = event.type
         }
+        
+        return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         newEvent = events[indexPath.row]
     }
     
+    
+    // Transitions
+    @IBAction func unwindToEvent(segue: UIStoryboardSegue) {
+        animationInProgress = true
+        let source = segue.sourceViewController as! QVAddEventFriendsViewController
+        newEvent = source.newEvent
+        for invitee in source.invitees {
+            invitee.postInvitation()
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "moveToEvent") {
-            let VC:QVEventViewController = segue.destinationViewController as QVEventViewController
+            let VC:QVEventViewController = segue.destinationViewController as! QVEventViewController
             if let event = newEvent {
                 VC.aEvent = event
             }
         }
         
         if (segue.identifier == "eventsToEvent") {
-            let VC:QVEventViewController = segue.destinationViewController as QVEventViewController
+            let VC:QVEventViewController = segue.destinationViewController as! QVEventViewController
             VC.aEvent = newEvent
         }
     }

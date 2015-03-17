@@ -19,7 +19,7 @@ class QVAddEventFriendsViewController: UITableViewController, UINavigationContro
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("friendCell", forIndexPath: indexPath) as! UITableViewCell
         let item = friendList[indexPath.row]
         cell.textLabel?.text = item
         

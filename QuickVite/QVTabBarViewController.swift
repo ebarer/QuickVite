@@ -55,10 +55,10 @@ class QVTabBarViewController: UITabBarController, FBLoginViewDelegate {
             if let friends = result["data"] as? [[String:AnyObject]] {
                 // Establish fbk friendlist, and IDs
                 for friend in friends {
-                    let name = friend["name"] as String
+                    let name = friend["name"] as! String
                     friendList.append(name)
                     
-                    let fbkid = friend["id"] as String
+                    let fbkid = friend["id"] as! String
                     friendListID.append(fbkid)
                 }
                 
